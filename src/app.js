@@ -1,4 +1,4 @@
-var VERSION = "v22.4.0";
+var VERSION = "v22.4.1";
 var LS = {
   dark: "flashcards-dark",
   theme: "flashcards-theme",
@@ -206,9 +206,6 @@ function initLang() {
   CATS = isDe ? CATS_DE : CATS_EN;
   WORDS = isDe ? WORDS_DE : WORDS_EN;
   LS_KEY = LS.known[mode];
-  byId("langSub").textContent = isDe
-    ? "Mots par niveau A1–C2, alignés sur les listes Goethe. Pluriel et déclinaisons sur la même face."
-    : "Touche la carte pour la retourner. Ces mots couvrent ~65 % de tout texte anglais.";
   byId("langTip").textContent = isDe
     ? "Astuce : apprends toujours le nom avec son article (der/die/das)."
     : "Astuce : commence par « Articles & pronoms » puis « Verbes ».";
