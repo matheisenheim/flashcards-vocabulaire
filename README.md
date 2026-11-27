@@ -16,7 +16,7 @@ L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashca
 - **Suivi de progression** : bouton « Je connais », pourcentage de mots sus, statistiques et examens (seuil de réussite 70 %)
 - **Mode sombre** 🌙 persistant
 - **Import / export JSON** des listes de mots (depuis le Dashboard → 📂 Gestion des listes)
-- **PWA** : installable sur l'écran d'accueil du téléphone, ouverture plein écran
+- **PWA** : installable sur l'écran d'accueil du téléphone, ouverture plein écran, **fonctionne hors ligne** grâce au service worker (`sw.js`)
 
 ## 🚀 Utilisation
 
@@ -30,6 +30,8 @@ L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashca
 | Fichier | Contenu |
 | --- | --- |
 | `index.html` | L'application complète (version courante) |
+| `sw.js` | Service worker : met l'application en cache pour le fonctionnement hors ligne |
+| `.github/workflows/deploy-pages.yml` | Déploiement automatique du site sur GitHub Pages |
 | `vocabulaire-anglais.json` | ~984 mots anglais classés A1 → C2 |
 | `vocabulaire-allemand.json` | ~398 mots allemands classés A1 → C2 |
 | `CHANGELOG.md` | Historique des versions |

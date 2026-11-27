@@ -28,7 +28,7 @@ jobs:
       - name: Préparer le site statique
         run: |
           mkdir -p _site
-          cp index.html vocabulaire-anglais.json vocabulaire-allemand.json README.md CHANGELOG.md .nojekyll _site/
+          cp index.html sw.js vocabulaire-anglais.json vocabulaire-allemand.json README.md CHANGELOG.md .nojekyll _site/
       - name: Téléverser le site (artifact)
         uses: actions/upload-pages-artifact@v3
         with:

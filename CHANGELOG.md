@@ -2,6 +2,13 @@
 
 Historique des versions de l'application Flashcards Vocabulaire.
 
+## v22 — Service worker (hors ligne)
+- Nouveau `sw.js` : met l'application en cache à l'installation (cache versionné `flashcards-v22` : `index.html` + listes JSON)
+- Requêtes de navigation en « network-first » : HTML toujours à jour en ligne, repli sur le cache hors ligne
+- Autres requêtes GET same-origin en « cache-first » avec mise à jour du cache en arrière-plan
+- Enregistrement du service worker dans `index.html` (HTTPS uniquement ; inactif en ouverture locale `file://`)
+- `sw.js` ajouté à la liste des fichiers déployés par le workflow GitHub Pages
+
 ## v21 — PWA installable
 - Manifeste d'application intégré au fichier (nom, mode plein écran, orientation portrait, couleurs)
 - Icône d'application intégrée (étoile jaune sur fond sombre, encodée en base64)
