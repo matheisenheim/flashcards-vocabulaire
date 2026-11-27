@@ -4,6 +4,10 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v23.0.1 — Boutons ℹ️/thème dans l'en-tête
+- Les boutons Aide ℹ️ et thème ☀️/🌙/🍂 étaient en `position: fixed` et chevauchaient le contenu (titre, menu, carte) sur petit écran
+- Ils sont maintenant dans une ligne d'en-tête `.head` (flex, à côté du titre) : plus de superposition, à toute taille d'écran
+
 ## v23.0.0 — Batch pédagogie / technique / produit
 - **Pédagogie 1 — répétition espacée (SRS)** : boîtes de Leitner (0/1/2/4/7/21 jours), pastille « 📅 À revoir (n) » dans les vues EN/DE et FR, filtre « à revoir », compteurs au tableau de bord ; les réponses d'examen alimentent le SRS (`flashcards-srs-v1`)
 - **Pédagogie 2 — statistiques avancées** : révisions dues par langue, top 10 des mots les plus ratés aux examens (`flashcards-miss-v1`), courbe de taux de réussite des examens sur 14 jours
