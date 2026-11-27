@@ -4,6 +4,20 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v23.0.0 — Batch pédagogie / technique / produit
+- **Pédagogie 1 — répétition espacée (SRS)** : boîtes de Leitner (0/1/2/4/7/21 jours), pastille « 📅 À revoir (n) » dans les vues EN/DE et FR, filtre « à revoir », compteurs au tableau de bord ; les réponses d'examen alimentent le SRS (`flashcards-srs-v1`)
+- **Pédagogie 2 — statistiques avancées** : révisions dues par langue, top 10 des mots les plus ratés aux examens (`flashcards-miss-v1`), courbe de taux de réussite des examens sur 14 jours
+- **Technique 3** : plus aucun `alert()` — notifications discrètes `toast`
+- **Technique 4** : listes EN/DE chargées à la demande par `fetch` sur HTTP(S) (`data/*.json` servis par Pages) ; les JSON embarqués restent le repli en `file://` / hors ligne ; `indexedDB` guardé si indisponible
+- **Technique 6 — i18n FR/EN** : interface entièrement traduisible (`data-i18n`, `data-i18n-html`, `data-i18n-ph`, `data-i18n-aria`), sélecteur de langue d'interface dans chaque panneau ⚙️ Options, persisté (`flashcards-ui-lang`), `<html lang>` et aria-labels traduits, aide traduite
+- **Technique 1 — tests E2E** : `e2e/e2e.spec.mjs` sous jsdom (vrai DOM : démarrage, navigation, retournement Entrée/clic, menu des langues, cycle des thèmes, switch FR→EN, dashboard, examen, aide) ; job CI `e2e` (`npm ci`) ; `package.json` + `package-lock.json` (seule dev-dépendance : jsdom, jamais embarquée dans la PWA)
+- **Produit 2 — aide ℹ️ dans l'app** : overlay d'aide (utilisation, options, thèmes, données locales, hors ligne, version)
+- 16 tests unitaires + 8 tests E2E : OK
+
+## v22.4.1 — Allègement de l'en-tête
+- Suppression des textes du haut de page (« Mots par niveau… » / « Touche la carte pour la retourner… » / « Recto : le mot — Verso : … ») dans les vues anglais/allemand et français, plus de l'assignation `langSub` et de la règle CSS `.sub` inutilisée
+- Conservés : les astuces en bas de page (`langTip`/`frTip`) et les indices à l'intérieur des cartes
+
 ## v22.4.0 — Panneau d'options repliable
 - Toutes les options des vues (recherche, catégorie, niveau, sens EN↔FR, mélange, examen, recommencer, favoris, réinitialisations, changement de fichier) regroupées dans un `<details>` « ⚙️ Options » repliable par vue
 - État ouvert/fermé persisté (`flashcards-opts-v1`, par vue)

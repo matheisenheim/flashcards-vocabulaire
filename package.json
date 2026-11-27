@@ -1,0 +1,15 @@
+{
+  "name": "flashcards-vocabulaire",
+  "version": "23.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PWA de flashcards de vocabulaire FR/EN/DE, 100 % locale (zéro dépendance en production)",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test",
+    "test:e2e": "node --test e2e/e2e.spec.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.1"
+  }
+}

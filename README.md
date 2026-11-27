@@ -15,6 +15,10 @@ L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashca
 - **Niveaux CEFR** : anglais et allemand classés A1 → C2
 - **Favoris** : étoile jaune ★ = favori, gris ☆ = non favori, filtre « Favoris » pour ne réviser que ses favoris
 - **Suivi de progression** : bouton « Je connais », pourcentage de mots sus, statistiques et examens (seuil de réussite 70 %)
+- **Répétition espacée (SRS)** : pastille « 📅 À revoir » + filtre des révisions dues (boîtes de Leitner 1/2/4/7/21 j), alimentées par les examens
+- **Tableau de bord enrichi** : révisions dues par langue, mots les plus ratés, courbe de réussite des examens sur 14 jours
+- **Interface en français ou en anglais** (sélecteur dans ⚙️ Options, persisté)
+- **Aide ℹ️** intégrée à l'app (bouton en haut à droite)
 - **Trois thèmes** persistants : clair ☀️, sombre 🌙, automne chaud 🍂 (bouton en haut à droite)
 - **Import / export JSON** des listes de mots (depuis le Dashboard → 📂 Gestion des listes)
 - **PWA** : installable sur l'écran d'accueil du téléphone, ouverture plein écran, **fonctionne hors ligne** grâce au service worker (`sw.js`)
@@ -40,9 +44,11 @@ L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashca
 | `index.html` | Application mono-fichier **générée** — ne pas éditer à la main |
 | `sw.js` | Service worker **généré** — ne pas éditer à la main |
 | `.github/workflows/deploy-pages.yml` | Déploie le site sur GitHub Pages à chaque push sur `main` |
-| `.github/workflows/ci.yml` | CI : tests unitaires + lint des workflows |
+| `.github/workflows/ci.yml` | CI : tests unitaires + tests E2E (jsdom) + lint des workflows |
 | `.github/workflows/release.yml` | Release GitHub automatique sur tag `vX.Y.Z` |
-| `test/app.test.mjs` | Tests unitaires (`node --test`) |
+| `test/app.test.mjs` | Tests unitaires (`node --test`, zéro dépendance) |
+| `e2e/e2e.spec.mjs` | Tests E2E sur le vrai DOM (`npm run test:e2e`, jsdom) |
+| `package.json` / `package-lock.json` | Scripts + dev-dépendance jsdom (tests uniquement, jamais embarquée dans la PWA) |
 | `CHANGELOG.md` | Historique des versions |
 
 ## 🛠 Développement
@@ -50,9 +56,10 @@ L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashca
 1. Modifier `src/` (template, CSS, JS) et `data/` (listes de mots)
 2. `node build.mjs` → régénère `index.html` et `sw.js` à la racine (Node requis, zéro dépendance)
 3. `node --test` → lance les tests unitaires (`test/`, zéro dépendance)
-4. La CI (`.github/workflows/ci.yml`) vérifie à chaque push : syntaxe, tests, build à jour (`git diff --exit-code`), lint des workflows (actionlint)
-5. Le site est déployé automatiquement sur GitHub Pages à chaque push sur `main` (`deploy-pages.yml`)
-6. Release : bump `VERSION` dans `src/app.js` (format `x.x.x`) + entrée dans `CHANGELOG.md`, commit, puis `git tag vX.Y.Z && git push origin vX.Y.Z` → `release.yml` vérifie la cohérence tag/VERSION et publie une release GitHub avec le mono-fichier `index.html` en pièce jointe
+4. Tests E2E (vrai DOM via jsdom) : `npm ci` puis `npm run test:e2e` (`e2e/`, lit `index.html` généré)
+5. La CI (`.github/workflows/ci.yml`) vérifie à chaque push : syntaxe, tests unitaires, tests E2E, build à jour (`git diff --exit-code`), lint des workflows (actionlint)
+6. Le site est déployé automatiquement sur GitHub Pages à chaque push sur `main` (`deploy-pages.yml`)
+7. Release : bump `VERSION` dans `src/app.js` (format `x.x.x`) + entrée dans `CHANGELOG.md`, commit, puis `git tag vX.Y.Z && git push origin vX.Y.Z` → `release.yml` vérifie la cohérence tag/VERSION et publie une release GitHub avec le mono-fichier `index.html` en pièce jointe
 
 ## 🔧 Principe
 

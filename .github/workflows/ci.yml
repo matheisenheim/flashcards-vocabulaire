@@ -3,9 +3,9 @@ name: CI
 on:
   push:
     branches: [main]
-    paths: ["src/**", "data/**", "test/**", "build.mjs", ".github/workflows/**"]
+    paths: ["src/**", "data/**", "test/**", "e2e/**", "build.mjs", "package.json", "package-lock.json", ".github/workflows/**"]
   pull_request:
-    paths: ["src/**", "data/**", "test/**", "build.mjs", ".github/workflows/**"]
+    paths: ["src/**", "data/**", "test/**", "e2e/**", "build.mjs", "package.json", "package-lock.json", ".github/workflows/**"]
   workflow_dispatch:
 
 permissions:
@@ -29,6 +29,20 @@ jobs:
         run: |
           node build.mjs
           git diff --exit-code -- index.html sw.js
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+      - name: Installer Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Installer les dépendances de test
+        run: npm ci
+      - name: Tests E2E (jsdom, vrai DOM sur index.html généré)
+        run: node --test e2e/e2e.spec.mjs
 
   lint-workflows:
     runs-on: ubuntu-latest

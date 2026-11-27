@@ -16,7 +16,7 @@ var document = {
         if (p === "classList") return { toggle: function () {}, remove: function () {} };
         if (p === "style") return {};
         if (p === "children") return [];
-        return function () {};
+        return function () { return []; };
       },
       set: function () { return true; }
     });
@@ -24,7 +24,9 @@ var document = {
   createElement: function () { return { value: "", textContent: "" }; },
   createElementNS: function () { return { setAttribute: function () {}, appendChild: function () {}, style: {} }; },
   querySelector: function () { return { setAttribute: function () {} }; },
+  querySelectorAll: function () { return []; },
   addEventListener: function () {},
+  documentElement: {},
   body: { classList: { toggle: function () {}, contains: function () { return false; } } }
 };
 var window = { addEventListener: function () {} };
@@ -123,6 +125,9 @@ test("LS : clés de stockage stables (compatibilité données utilisateurs)", ()
   assert.equal(app.LS.known.de, "flashcards-de-known-v1");
   assert.equal(app.LS.known.fr, "flashcards-fr-known-v1");
   assert.equal(app.LS.favs.fr, "flashcards-fr-favs-v1");
+  assert.equal(app.LS.ui, "flashcards-ui-lang");
+  assert.equal(app.LS.srs, "flashcards-srs-v1");
+  assert.equal(app.LS.miss, "flashcards-miss-v1");
 });
 
 test("VERSION au format x.x.x", () => {
@@ -204,4 +209,25 @@ test("moteur unifié : render() ne plante pas avec les stubs DOM", () => {
   app.frEngine.render();
   app.langEngine.next();
   app.frEngine.next();
+});
+
+test("i18n : parité des dictionnaires fr/en, t() avec variables, setUILang persisté", () => {
+  const app = loadApp();
+  assert.equal(app.uiLang, "fr");
+  assert.deepEqual(Object.keys(app.STR.fr).sort(), Object.keys(app.STR.en).sort());
+  assert.equal(app.t("qpos", { i: 2, n: 20 }), "Question 2 / 20");
+  assert.equal(app.t("dueN", { n: 3 }), "3 à revoir");
+  assert.match(app.t("verFoot").replace("__V__", "v1.0.0"), /^Version v1\.0\.0/);
+  app.setUILang("en");
+  assert.equal(app.uiLang, "en");
+  assert.equal(app.lsGet(app.LS.ui), "en");
+  assert.equal(app.t("know"), "I know this word");
+  assert.equal(app.t("dueN", { n: 3 }), "3 to review");
+  assert.equal(app.t("menu_dash"), "📊 Dashboard");
+  app.setUILang("fr");
+  assert.equal(app.uiLang, "fr");
+  assert.equal(app.lsGet(app.LS.ui), "fr");
+  assert.equal(app.t("opts"), "⚙️ Options");
+  app.setUILang("de");
+  assert.equal(app.uiLang, "fr");
 });
