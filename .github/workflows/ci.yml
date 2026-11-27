@@ -35,5 +35,12 @@ jobs:
     steps:
       - name: Récupérer le code
         uses: actions/checkout@v4
+      - name: Installer actionlint v1.7.12
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release download --repo rhysd/actionlint v1.7.12 --pattern '*_linux_amd64.tar.gz' --dir /tmp/actionlint
+          tar -xzf /tmp/actionlint/actionlint_*_linux_amd64.tar.gz -C /tmp/actionlint ./actionlint
+          echo "/tmp/actionlint" >> "$GITHUB_PATH"
       - name: Lint des workflows GitHub Actions
-        uses: rhysd/actionlint-action@v1
+        run: actionlint -color
