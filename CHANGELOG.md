@@ -4,6 +4,12 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v22.1.0 — CI, tests, accessibilité, releases (palier 3)
+- Tests unitaires `node --test` (`test/app.test.mjs`, zéro dépendance) : `shuffledArr`, `navGo`, `daysBetween`, `normalizeLangList`, `esc`, `cleanTitle`, `lsGetJSON`/`lsSetJSON`, stabilité des clés `LS`, format de `VERSION`
+- CI `.github/workflows/ci.yml` : syntaxe (`node --check`), tests, build à jour (`git diff --exit-code`), lint des workflows avec actionlint
+- Accessibilité : cartes focusables au clavier (`tabindex`/`role="button"`, Entrée/Espace pour retourner), `aria-label`, contour `:focus-visible`
+- Release automatique `.github/workflows/release.yml` : sur tag `vX.Y.Z`, vérifie que `VERSION` == tag, build à jour, publie une release GitHub avec `index.html` en pièce jointe
+
 ## v22.0.2 — Sources découpées + build (palier 2)
 - `src/` (`index.template.html`, `style.css`, `app.js`, `sw.js`) + `data/` (JSON) : les listes de mots ont une **source unique** (`data/*.json`), injectées au build
 - `build.mjs` (Node, zéro dépendance) : `node build.mjs` régénère `index.html` et `sw.js` à la racine (fichiers générés, ne pas éditer)

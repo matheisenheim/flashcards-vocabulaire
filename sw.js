@@ -1,4 +1,4 @@
-var CACHE = "flashcards-v22.0.2";
+var CACHE = "flashcards-v22.1.0";
 var ASSETS = ["./", "index.html", "vocabulaire-anglais.json", "vocabulaire-allemand.json"];
 
 self.addEventListener("install", function (e) {

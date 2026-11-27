@@ -38,15 +38,20 @@ L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashca
 | `build.mjs` | `node build.mjs` régénère `index.html` et `sw.js` à la racine |
 | `index.html` | Application mono-fichier **générée** — ne pas éditer à la main |
 | `sw.js` | Service worker **généré** — ne pas éditer à la main |
-| `.github/workflows/deploy-pages.yml` | CI : vérifie le build, puis déploie sur GitHub Pages |
+| `.github/workflows/deploy-pages.yml` | Déploie le site sur GitHub Pages à chaque push sur `main` |
+| `.github/workflows/ci.yml` | CI : tests unitaires + lint des workflows |
+| `.github/workflows/release.yml` | Release GitHub automatique sur tag `vX.Y.Z` |
+| `test/app.test.mjs` | Tests unitaires (`node --test`) |
 | `CHANGELOG.md` | Historique des versions |
 
 ## 🛠 Développement
 
 1. Modifier `src/` (template, CSS, JS) et `data/` (listes de mots)
 2. `node build.mjs` → régénère `index.html` et `sw.js` à la racine (Node requis, zéro dépendance)
-3. La CI vérifie à chaque push que les fichiers générés sont à jour (`git diff --exit-code`) puis déploie le site
-4. Versionnage `x.x.x` : bump `VERSION` dans `src/app.js` + entrée dans `CHANGELOG.md`
+3. `node --test` → lance les tests unitaires (`test/`, zéro dépendance)
+4. La CI (`.github/workflows/ci.yml`) vérifie à chaque push : syntaxe, tests, build à jour (`git diff --exit-code`), lint des workflows (actionlint)
+5. Le site est déployé automatiquement sur GitHub Pages à chaque push sur `main` (`deploy-pages.yml`)
+6. Release : bump `VERSION` dans `src/app.js` (format `x.x.x`) + entrée dans `CHANGELOG.md`, commit, puis `git tag vX.Y.Z && git push origin vX.Y.Z` → `release.yml` vérifie la cohérence tag/VERSION et publie une release GitHub avec le mono-fichier `index.html` en pièce jointe
 
 ## 🔧 Principe
 

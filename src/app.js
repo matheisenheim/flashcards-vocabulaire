@@ -1,4 +1,4 @@
-var VERSION = "v22.0.2";
+var VERSION = "v22.1.0";
 var LS = {
   dark: "flashcards-dark",
   stats: "flashcards-stats-v1",
@@ -42,6 +42,7 @@ var WORDS_DE = __WORDS_DE__;
 /* ================= ONGLETS ================= */
 var mode = "en";
 function byId(i) { return document.getElementById(i); }
+function cardKey(e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.currentTarget.click(); } }
 var __lastTap = 0;
 function isDoubleTap() { var n = Date.now(); if (n - __lastTap < 450) { return true; } __lastTap = n; return false; }
 function toast(msg) {
@@ -289,6 +290,7 @@ byId("card").onclick = function () {
   if (!lState.flipped) { var w = deck()[lState.index]; if (w) addWordRead(mode + ":" + w[0]); }
   lState.flipped = !lState.flipped; lRender();
 };
+byId("card").addEventListener("keydown", cardKey);
 byId("nextBtn").onclick = lNext;
 byId("prevBtn").onclick = lPrev;
 byId("reviewBtn").onclick = lNext;
@@ -540,6 +542,7 @@ byId("frCard").onclick = function () {
   if (!fState.flipped) { var w = frDeck()[fState.index]; if (w) addWordRead("fr:" + w.t); }
   fState.flipped = !fState.flipped; fRender();
 };
+byId("frCard").addEventListener("keydown", cardKey);
 byId("frNext").onclick = fNext;
 byId("frPrev").onclick = fPrev;
 byId("frReviewBtn").onclick = fNext;

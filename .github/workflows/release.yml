@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+      - name: Installer Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Cohérence VERSION / tag
+        run: |
+          V=$(grep -o 'var VERSION = "[^"]*"' src/app.js | sed 's/.*"\(.*\)"/\1/')
+          if [ "$V" != "$GITHUB_REF_NAME" ]; then
+            echo "VERSION dans src/app.js = $V mais tag poussé = $GITHUB_REF_NAME"
+            exit 1
+          fi
+          echo "VERSION $V == tag $GITHUB_REF_NAME : OK"
+      - name: Build à jour
+        run: |
+          node build.mjs
+          git diff --exit-code -- index.html sw.js
+      - name: Publier la release GitHub (mono-fichier en pièce jointe)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" index.html \
+            --title "Flashcards Vocabulaire $GITHUB_REF_NAME" \
+            --notes "Application mono-fichier $GITHUB_REF_NAME : télécharger index.html, l'ouvrir dans un navigateur — fonctionne hors ligne et est installable en PWA (service worker inclus)."
