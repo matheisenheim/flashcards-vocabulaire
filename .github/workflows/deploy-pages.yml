@@ -41,10 +41,3 @@ jobs:
       - name: Déployer sur GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        continue-on-error: true
-      - name: Attendre avant nouvelle tentative
-        if: steps.deployment.outcome == "failure"
-        run: sleep 10
-      - name: Déployer sur GitHub Pages (nouvelle tentative)
-        if: steps.deployment.outcome == "failure"
-        uses: actions/deploy-pages@v4

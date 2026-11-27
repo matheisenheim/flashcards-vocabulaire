@@ -4,6 +4,13 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v22.0.1 — Refactor interne (maintenance)
+- Thème clair/sombre en variables CSS (`--bg`, `--surface`, `--active-bg`…) : `body.dark` ne redéfinit plus que les variables, les ~24 règles de override sont supprimées
+- Stockage centralisé : constantes `LS` + helpers `lsGet` / `lsSet` / `lsGetJSON` / `lsSetJSON` (clés inchangées, données des utilisateurs conservées)
+- Navigation des cartes dédupliquée via `navGo` (modes fr/en/de)
+- Version unique `VERSION` dans `index.html`, injectée dans le pied de page ; cache du service worker aligné (`flashcards-v22.0.1`)
+- Workflow Pages : jobs `build` / `deploy` séparés (contournement du bug actions/deploy-pages#451)
+
 ## v22.0.0 — Service worker (hors ligne)
 - Nouveau `sw.js` : met l'application en cache à l'installation (cache versionné `flashcards-v22.0.0` : `index.html` + listes JSON)
 - Requêtes de navigation en « network-first » : HTML toujours à jour en ligne, repli sur le cache hors ligne
