@@ -2,6 +2,10 @@
 
 Application **mono-fichier HTML** pour réviser du vocabulaire **français**, **anglais** et **allemand**, avec tableau de bord de progression, examens, favoris et mode sombre. Installable comme application (PWA).
 
+## 🌐 Version en ligne (GitHub Pages)
+
+L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashcards-vocabulaire](https://matheisenheim.github.io/flashcards-vocabulaire/)** (servie en HTTPS depuis la branche `main`, racine du dépôt). Toutes les données restent locales au navigateur, comme pour le fichier ouvert en local.
+
 ## ✨ Fonctionnalités
 
 - **Trois langues** : dictionnaire français (à importer depuis un fichier JSON Larousse), listes anglais et allemand intégrées
@@ -14,7 +18,7 @@ Application **mono-fichier HTML** pour réviser du vocabulaire **français**, **
 
 ## 🚀 Utilisation
 
-1. Télécharger `index.html` et l'ouvrir dans un navigateur (fonctionne hors ligne)
+1. Ouvrir la [version en ligne](https://matheisenheim.github.io/flashcards-vocabulaire/) dans un navigateur, ou télécharger `index.html` et l'ouvrir localement (fonctionne hors ligne)
 2. Pour le français : onglet Français → importer le fichier JSON Larousse (l'import n'est à faire qu'une fois, les mots sont stockés dans le navigateur)
 3. **Android (Chrome)** : menu ⋮ → *Ajouter à l'écran d'accueil*
 4. **iPhone (Safari)** : Partager → *Sur l'écran d'accueil*
