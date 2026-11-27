@@ -256,7 +256,7 @@
   "aimer ; möcht- = voudrais",
   "verbes",
   "mochte – gemocht",
-  "A1"
+  "A2"
  ],
  [
   "gehen",
@@ -1257,7 +1257,7 @@
   "ponctuel",
   "adjectifs",
   "",
-  "A1"
+  "A2"
  ],
  [
   "leicht",
@@ -1432,7 +1432,7 @@
   "fatigué",
   "adjectifs",
   "",
-  "A1"
+  "A2"
  ],
  [
   "der Mann",
@@ -1737,35 +1737,35 @@
  ],
  [
   "der Beruf",
-  "mÃ©tier, profession",
+  "métier, profession",
   "noms",
   "pl. die Berufe",
   "B1"
  ],
  [
   "die Entscheidung",
-  "dÃ©cision",
+  "décision",
   "noms",
   "pl. -en",
   "B1"
  ],
  [
   "die Entwicklung",
-  "dÃ©veloppement",
+  "développement",
   "noms",
   "",
   "B1"
  ],
  [
   "die Erfahrung",
-  "expÃ©rience",
+  "expérience",
   "noms",
   "pl. -en",
   "B1"
  ],
  [
   "der Erfolg",
-  "succÃ¨s",
+  "succès",
   "noms",
   "pl. -e",
   "B1"
@@ -1779,14 +1779,14 @@
  ],
  [
   "die Gesundheit",
-  "santÃ©",
+  "santé",
   "noms",
   "",
   "B1"
  ],
  [
   "die Herausforderung",
-  "dÃ©fi",
+  "défi",
   "noms",
   "pl. -en",
   "B1"
@@ -1830,7 +1830,7 @@
   "sich bewerben",
   "postuler",
   "verbes",
-  "bewirbt â bewarb â beworben",
+  "bewirbt – bewarb – beworben",
   "B1"
  ],
  [
@@ -1863,14 +1863,14 @@
  ],
  [
   "entscheiden",
-  "dÃ©cider",
+  "décider",
   "verbes",
-  "entschied â entschieden",
+  "entschied – entschieden",
   "B1"
  ],
  [
   "entwickeln",
-  "dÃ©velopper",
+  "développer",
   "verbes",
   "",
   "B1"
@@ -1879,14 +1879,14 @@
   "empfehlen",
   "recommander",
   "verbes",
-  "empfahl â empfohlen",
+  "empfahl – empfohlen",
   "B1"
  ],
  [
   "erfahren",
-  "apprendre (une nouvelle), Ã©prouver",
+  "apprendre (une nouvelle), éprouver",
   "verbes",
-  "erfuhr â erfahren",
+  "erfuhr – erfahren",
   "B1"
  ],
  [
@@ -1898,7 +1898,7 @@
  ],
  [
   "erledigen",
-  "accomplir, rÃ©gler",
+  "accomplir, régler",
   "verbes",
   "",
   "B1"
@@ -1911,15 +1911,15 @@
   "B1"
  ],
  [
-  "gehÃ¶ren",
-  "appartenir Ã ",
+  "gehören",
+  "appartenir à",
   "verbes",
-  "gehÃ¶ren + datif",
+  "gehören + datif",
   "B1"
  ],
  [
   "interessieren",
-  "intÃ©resser (sich interessieren fÃ¼r)",
+  "intéresser (sich interessieren für)",
   "verbes",
   "",
   "B1"
@@ -1932,8 +1932,8 @@
   "B1"
  ],
  [
-  "prÃ¼fen",
-  "vÃ©rifier, contrÃ´ler",
+  "prüfen",
+  "vérifier, contrôler",
   "verbes",
   "",
   "B1"
@@ -1947,27 +1947,27 @@
  ],
  [
   "sparen",
-  "Ã©conomiser",
+  "économiser",
   "verbes",
   "",
   "B1"
  ],
  [
-  "stÃ¶ren",
-  "dÃ©ranger",
+  "stören",
+  "déranger",
   "verbes",
   "",
   "B1"
  ],
  [
   "teilnehmen",
-  "participer Ã ",
+  "participer à",
   "verbes",
-  "nimmt teil â nahm teil â teilgenommen",
+  "nimmt teil – nahm teil – teilgenommen",
   "B1"
  ],
  [
-  "Ã¼berzeugen",
+  "überzeugen",
   "convaincre",
   "verbes",
   "",
@@ -1982,21 +1982,21 @@
  ],
  [
   "vermeiden",
-  "Ã©viter",
+  "éviter",
   "verbes",
-  "vermied â vermieden",
+  "vermied – vermieden",
   "B1"
  ],
  [
   "verdienen",
-  "gagner (de l'argent), mÃ©riter",
+  "gagner (de l'argent), mériter",
   "verbes",
   "",
   "B1"
  ],
  [
   "vertrauen",
-  "faire confiance Ã ",
+  "faire confiance à",
   "verbes",
   "vertrauen + datif",
   "B1"
@@ -2010,21 +2010,21 @@
  ],
  [
   "wechseln",
-  "changer, Ã©changer",
+  "changer, échanger",
   "verbes",
   "",
   "B1"
  ],
  [
-  "sich gewÃ¶hnen an",
-  "s'habituer Ã ",
+  "sich gewöhnen an",
+  "s'habituer à",
   "verbes",
-  "gewÃ¶hnt sich â gewÃ¶hnte sich",
+  "gewöhnt sich – gewöhnte sich",
   "B1"
  ],
  [
   "ehrlich",
-  "honnÃªte",
+  "honnête",
   "adjectifs",
   "",
   "B1"
@@ -2037,14 +2037,14 @@
   "B1"
  ],
  [
-  "gefÃ¤hrlich",
+  "gefährlich",
   "dangereux",
   "adjectifs",
   "",
   "B1"
  ],
  [
-  "hÃ¶flich",
+  "höflich",
   "poli",
   "adjectifs",
   "",
@@ -2059,28 +2059,28 @@
  ],
  [
   "ordentlich",
-  "soigneux, rangÃ©",
+  "soigneux, rangé",
   "adjectifs",
   "",
   "B1"
  ],
  [
   "peinlich",
-  "gÃªnant, embarrassant",
+  "gênant, embarrassant",
   "adjectifs",
   "",
   "B1"
  ],
  [
-  "schÃ¤dlich",
+  "schädlich",
   "nocif",
   "adjectifs",
   "",
   "B1"
  ],
  [
-  "selbststÃ¤ndig",
-  "indÃ©pendant, autonome",
+  "selbstständig",
+  "indépendant, autonome",
   "adjectifs",
   "",
   "B1"
@@ -2093,14 +2093,14 @@
   "B1"
  ],
  [
-  "ungewÃ¶hnlich",
+  "ungewöhnlich",
   "inhabituel",
   "adjectifs",
   "",
   "B1"
  ],
  [
-  "zuverlÃ¤ssig",
+  "zuverlässig",
   "fiable",
   "adjectifs",
   "",
@@ -2124,7 +2124,7 @@
   "der Einfluss",
   "influence",
   "noms",
-  "pl. die EinflÃ¼sse",
+  "pl. die Einflüsse",
   "B2"
  ],
  [
@@ -2135,8 +2135,8 @@
   "B2"
  ],
  [
-  "die FÃ¤higkeit",
-  "capacitÃ©, aptitude",
+  "die Fähigkeit",
+  "capacité, aptitude",
   "noms",
   "pl. -en",
   "B2"
@@ -2150,20 +2150,20 @@
  ],
  [
   "die Folge",
-  "consÃ©quence, suite",
+  "conséquence, suite",
   "noms",
   "pl. -n",
   "B2"
  ],
  [
   "der Fortschritt",
-  "progrÃ¨s",
+  "progrès",
   "noms",
   "pl. -e",
   "B2"
  ],
  [
-  "das VerhÃ¤ltnis",
+  "das Verhältnis",
   "rapport, relation",
   "noms",
   "pl. -se",
@@ -2171,7 +2171,7 @@
  ],
  [
   "die Voraussetzung",
-  "condition prÃ©alable",
+  "condition préalable",
   "noms",
   "pl. -en",
   "B2"
@@ -2185,27 +2185,27 @@
  ],
  [
   "anerkennen",
-  "reconnaÃ®tre",
+  "reconnaître",
   "verbes",
-  "erkannte an â anerkannt",
+  "erkannte an – anerkannt",
   "B2"
  ],
  [
   "aufgeben",
-  "abandonner ; expÃ©dier",
+  "abandonner ; expédier",
   "verbes",
-  "gab auf â aufgegeben",
+  "gab auf – aufgegeben",
   "B2"
  ],
  [
   "beitragen",
-  "contribuer Ã ",
+  "contribuer à",
   "verbes",
-  "trÃ¤gt bei â trug bei â beigetragen",
+  "trägt bei – trug bei – beigetragen",
   "B2"
  ],
  [
-  "berÃ¼cksichtigen",
+  "berücksichtigen",
   "prendre en compte",
   "verbes",
   "",
@@ -2215,7 +2215,7 @@
   "betreffen",
   "concerner",
   "verbes",
-  "betrifft â betraf â betroffen",
+  "betrifft – betraf – betroffen",
   "B2"
  ],
  [
@@ -2227,9 +2227,9 @@
  ],
  [
   "durchsetzen",
-  "imposer, faire prÃ©valoir",
+  "imposer, faire prévaloir",
   "verbes",
-  "setzte durch â durchgesetzt",
+  "setzte durch – durchgesetzt",
   "B2"
  ],
  [
@@ -2241,14 +2241,14 @@
  ],
  [
   "entstehen",
-  "naÃ®tre, se crÃ©er",
+  "naître, se créer",
   "verbes",
-  "entstand â entstanden",
+  "entstand – entstanden",
   "B2"
  ],
  [
-  "erhÃ¶hen",
-  "augmenter, Ã©lever",
+  "erhöhen",
+  "augmenter, élever",
   "verbes",
   "",
   "B2"
@@ -2261,7 +2261,7 @@
   "B2"
  ],
  [
-  "fÃ¶rdern",
+  "fördern",
   "promouvoir, encourager",
   "verbes",
   "",
@@ -2283,21 +2283,21 @@
  ],
  [
   "hindern",
-  "empÃªcher",
+  "empêcher",
   "verbes",
   "",
   "B2"
  ],
  [
   "herstellen",
-  "fabriquer, Ã©tablir",
+  "fabriquer, établir",
   "verbes",
   "",
   "B2"
  ],
  [
   "verbessern",
-  "amÃ©liorer",
+  "améliorer",
   "verbes",
   "",
   "B2"
@@ -2306,12 +2306,12 @@
   "vergleichen",
   "comparer",
   "verbes",
-  "verglich â verglichen",
+  "verglich – verglichen",
   "B2"
  ],
  [
   "verhindern",
-  "empÃªcher",
+  "empêcher",
   "verbes",
   "",
   "B2"
@@ -2332,16 +2332,16 @@
  ],
  [
   "verraten",
-  "trahir, rÃ©vÃ©ler",
+  "trahir, révéler",
   "verbes",
-  "verriet â verraten",
+  "verriet – verraten",
   "B2"
  ],
  [
   "sich verlassen auf",
-  "compter sur, se fier Ã ",
+  "compter sur, se fier à",
   "verbes",
-  "verlÃ¤sst sich â verlieÃ sich",
+  "verlässt sich – verließ sich",
   "B2"
  ],
  [
@@ -2353,56 +2353,56 @@
  ],
  [
   "angemessen",
-  "appropriÃ©",
+  "approprié",
   "adjectifs",
   "",
   "B2"
  ],
  [
   "erheblich",
-  "considÃ©rable",
+  "considérable",
   "adjectifs",
   "",
   "B2"
  ],
  [
-  "grundsÃ¤tzlich",
+  "grundsätzlich",
   "fondamental, en principe",
   "adjectifs",
   "",
   "B2"
  ],
  [
-  "maÃgeblich",
-  "dÃ©cisif, dÃ©terminant",
+  "maßgeblich",
+  "décisif, déterminant",
   "adjectifs",
   "",
   "B2"
  ],
  [
   "problematisch",
-  "problÃ©matique",
+  "problématique",
   "adjectifs",
   "",
   "B2"
  ],
  [
   "sinnvoll",
-  "sensÃ©, utile",
+  "sensé, utile",
   "adjectifs",
   "",
   "B2"
  ],
  [
   "umstritten",
-  "controversÃ©",
+  "controversé",
   "adjectifs",
   "",
   "B2"
  ],
  [
   "unvermeidlich",
-  "inÃ©vitable",
+  "inévitable",
   "adjectifs",
   "",
   "B2"
@@ -2416,14 +2416,14 @@
  ],
  [
   "notwendig",
-  "nÃ©cessaire",
+  "nécessaire",
   "adjectifs",
   "",
   "B2"
  ],
  [
   "die Bereitschaft",
-  "disposition, bonne volontÃ©",
+  "disposition, bonne volonté",
   "noms",
   "",
   "C1"
@@ -2439,18 +2439,18 @@
   "der Eindruck",
   "impression",
   "noms",
-  "pl. die EindrÃ¼cke",
+  "pl. die Eindrücke",
   "C1"
  ],
  [
   "die Einsicht",
-  "comprÃ©hension, luciditÃ©",
+  "compréhension, lucidité",
   "noms",
   "pl. -en",
   "C1"
  ],
  [
-  "die EmpÃ¶rung",
+  "die Empörung",
   "indignation",
   "noms",
   "",
@@ -2458,23 +2458,23 @@
  ],
  [
   "die Gelassenheit",
-  "calme, sÃ©rÃ©nitÃ©",
+  "calme, sérénité",
   "noms",
   "",
   "C1"
  ],
  [
   "der Sachverhalt",
-  "Ã©tat de fait, situation",
+  "état de fait, situation",
   "noms",
   "pl. -e",
   "C1"
  ],
  [
-  "die Ãbereinkunft",
+  "die Übereinkunft",
   "accord",
   "noms",
-  "pl. -Ã¼fte",
+  "pl. -üfte",
   "C1"
  ],
  [
@@ -2486,7 +2486,7 @@
  ],
  [
   "das Vorurteil",
-  "prÃ©jugÃ©",
+  "préjugé",
   "noms",
   "pl. -e",
   "C1"
@@ -2499,8 +2499,8 @@
   "C1"
  ],
  [
-  "abschwÃ¤chen",
-  "attÃ©nuer",
+  "abschwächen",
+  "atténuer",
   "verbes",
   "",
   "C1"
@@ -2520,49 +2520,49 @@
   "C1"
  ],
  [
-  "befÃ¼rworten",
-  "Ãªtre favorable Ã ",
+  "befürworten",
+  "être favorable à",
   "verbes",
   "",
   "C1"
  ],
  [
   "sich entziehen",
-  "se soustraire Ã ",
+  "se soustraire à",
   "verbes",
-  "entzieht sich â entzog sich",
+  "entzieht sich – entzog sich",
   "C1"
  ],
  [
   "gedeihen",
-  "prospÃ©rer, croÃ®tre",
+  "prospérer, croître",
   "verbes",
-  "gedieh â gediehen",
+  "gedieh – gediehen",
   "C1"
  ],
  [
   "hervorheben",
-  "mettre en Ã©vidence",
+  "mettre en évidence",
   "verbes",
-  "hob hervor â hervorgehoben",
+  "hob hervor – hervorgehoben",
   "C1"
  ],
  [
   "nahelegen",
-  "suggÃ©rer fortement",
+  "suggérer fortement",
   "verbes",
-  "legte nahe â nahegelegt",
+  "legte nahe – nahegelegt",
   "C1"
  ],
  [
-  "abschwÃ¤chend",
-  "attÃ©nuant",
+  "abschwächend",
+  "atténuant",
   "adverbes",
   "",
   "C1"
  ],
  [
-  "beilÃ¤ufig",
+  "beiläufig",
   "au passage, incidemment",
   "adverbes",
   "",
@@ -2570,14 +2570,14 @@
  ],
  [
   "bevorstehend",
-  "imminent, Ã  venir",
+  "imminent, à venir",
   "adjectifs",
   "",
   "C1"
  ],
  [
-  "gegenwÃ¤rtig",
-  "actuel, prÃ©sent",
+  "gegenwärtig",
+  "actuel, présent",
   "adjectifs",
   "",
   "C1"
@@ -2598,7 +2598,7 @@
  ],
  [
   "ruckhaltlos",
-  "sans rÃ©serve",
+  "sans réserve",
   "adjectifs",
   "",
   "C1"
@@ -2612,14 +2612,14 @@
  ],
  [
   "unbeirrt",
-  "inÃ©branlable",
+  "inébranlable",
   "adjectifs",
   "",
   "C1"
  ],
  [
-  "unerschÃ¼tterlich",
-  "inÃ©branlable",
+  "unerschütterlich",
+  "inébranlable",
   "adjectifs",
   "",
   "C1"
@@ -2633,28 +2633,28 @@
  ],
  [
   "zeitgleich",
-  "simultanÃ©",
+  "simultané",
   "adjectifs",
   "",
   "C1"
  ],
  [
   "zwingend",
-  "impÃ©ratif, contraignant",
+  "impératif, contraignant",
   "adjectifs",
   "",
   "C1"
  ],
  [
   "das Dasein",
-  "existence, Ãªtre",
+  "existence, être",
   "noms",
   "",
   "C2"
  ],
  [
   "die Eigenheit",
-  "particularitÃ©, singularitÃ©",
+  "particularité, singularité",
   "noms",
   "pl. -en",
   "C2"
@@ -2667,7 +2667,7 @@
   "C2"
  ],
  [
-  "die MutmaÃung",
+  "die Mutmaßung",
   "supposition, conjecture",
   "noms",
   "pl. -en",
@@ -2682,9 +2682,9 @@
  ],
  [
   "die Sehnsucht",
-  "nostalgie, dÃ©sir ardent",
+  "nostalgie, désir ardent",
   "noms",
-  "pl. -Ã¼chte",
+  "pl. -üchte",
   "C2"
  ],
  [
@@ -2703,7 +2703,7 @@
  ],
  [
   "das Wesen",
-  "Ãªtre, essence",
+  "être, essence",
   "noms",
   "",
   "C2"
@@ -2716,15 +2716,15 @@
   "C2"
  ],
  [
-  "anmaÃend",
-  "arrogant, prÃ©somptueux",
+  "anmaßend",
+  "arrogant, présomptueux",
   "adjectifs",
   "",
   "C2"
  ],
  [
   "ausschweifend",
-  "effrÃ©nÃ©, dÃ©bauchÃ©",
+  "effréné, débauché",
   "adjectifs",
   "",
   "C2"
@@ -2737,49 +2737,49 @@
   "C2"
  ],
  [
-  "fragwÃ¼rdig",
+  "fragwürdig",
   "douteux, contestable",
   "adjectifs",
   "",
   "C2"
  ],
  [
-  "hanebÃ¼chen",
-  "Ã©hontÃ©, invraisemblable",
+  "hanebüchen",
+  "éhonté, invraisemblable",
   "adjectifs",
   "",
   "C2"
  ],
  [
   "konsequenterweise",
-  "logiquement, par consÃ©quent",
+  "logiquement, par conséquent",
   "adverbes",
   "",
   "C2"
  ],
  [
   "leidenschaftlich",
-  "passionnÃ©",
+  "passionné",
   "adjectifs",
   "",
   "C2"
  ],
  [
-  "rÃ¼cksichtslos",
-  "sans Ã©gard, inconsidÃ©rÃ©",
+  "rücksichtslos",
+  "sans égard, inconsidéré",
   "adjectifs",
   "",
   "C2"
  ],
  [
-  "verblÃ¼ffend",
-  "stupÃ©fiant",
+  "verblüffend",
+  "stupéfiant",
   "adjectifs",
   "",
   "C2"
  ],
  [
-  "vordergrÃ¼ndig",
+  "vordergründig",
   "superficiel, apparent",
   "adjectifs",
   "",

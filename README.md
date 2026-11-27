@@ -29,13 +29,25 @@ L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashca
 
 | Fichier | Contenu |
 | --- | --- |
-| `index.html` | L'application complète (version courante) |
-| `sw.js` | Service worker : met l'application en cache pour le fonctionnement hors ligne |
-| `.github/workflows/deploy-pages.yml` | Déploiement automatique du site sur GitHub Pages |
-| `vocabulaire-anglais.json` | ~984 mots anglais classés A1 → C2 |
-| `vocabulaire-allemand.json` | ~398 mots allemands classés A1 → C2 |
+| `src/index.template.html` | Structure HTML (placeholders `/*__CSS__*/`, `/*__APP_JS__*/`) |
+| `src/style.css` | Feuille de style (variables CSS, thèmes clair/sombre) |
+| `src/app.js` | Logique de l'application (`VERSION`, placeholders `__WORDS_EN__`/`__WORDS_DE__`) |
+| `src/sw.js` | Service worker source (placeholder `__VERSION__` pour le cache) |
+| `data/vocabulaire-anglais.json` | 984 mots anglais classés A1 → C2 — **source unique** |
+| `data/vocabulaire-allemand.json` | 398 mots allemands classés A1 → C2 — **source unique** |
+| `build.mjs` | `node build.mjs` régénère `index.html` et `sw.js` à la racine |
+| `index.html` | Application mono-fichier **générée** — ne pas éditer à la main |
+| `sw.js` | Service worker **généré** — ne pas éditer à la main |
+| `.github/workflows/deploy-pages.yml` | CI : vérifie le build, puis déploie sur GitHub Pages |
 | `CHANGELOG.md` | Historique des versions |
+
+## 🛠 Développement
+
+1. Modifier `src/` (template, CSS, JS) et `data/` (listes de mots)
+2. `node build.mjs` → régénère `index.html` et `sw.js` à la racine (Node requis, zéro dépendance)
+3. La CI vérifie à chaque push que les fichiers générés sont à jour (`git diff --exit-code`) puis déploie le site
+4. Versionnage `x.x.x` : bump `VERSION` dans `src/app.js` + entrée dans `CHANGELOG.md`
 
 ## 🔧 Principe
 
-Tout tient dans un seul fichier HTML : logique, styles, listes de mots, manifeste PWA et icône (encodés en base64). Les données de l'utilisateur (favoris, progression, réglages) sont stockées localement (localStorage / IndexedDB) — rien ne quitte le téléphone.
+L'application distribuée tient dans un seul fichier HTML généré : logique, styles, listes de mots, manifeste PWA et icône (encodés en base64). Les données de l'utilisateur (favoris, progression, réglages) sont stockées localement (localStorage / IndexedDB) — rien ne quitte le téléphone.

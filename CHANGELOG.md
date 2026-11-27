@@ -4,6 +4,14 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v22.0.2 — Sources découpées + build (palier 2)
+- `src/` (`index.template.html`, `style.css`, `app.js`, `sw.js`) + `data/` (JSON) : les listes de mots ont une **source unique** (`data/*.json`), injectées au build
+- `build.mjs` (Node, zéro dépendance) : `node build.mjs` régénère `index.html` et `sw.js` à la racine (fichiers générés, ne pas éditer)
+- `VERSION` dans `src/app.js` = source unique de version (pied de page + nom du cache du service worker)
+- CI : `node --check` sur les sources + `git diff --exit-code` pour garantir que le build commité est à jour, puis déploiement Pages
+- JSON régénérés depuis les données runtime : le mojibake corrigé en v20.0.0 est enfin propagé aux fichiers JSON ; allemand complet (398 mots avec niveaux)
+- **Correctif v22.0.1** : `LS`/`VERSION` étaient définis dans une IIFE interne → `ReferenceError` au chargement de l'app ; remontés en portée globale
+
 ## v22.0.1 — Refactor interne (maintenance)
 - Thème clair/sombre en variables CSS (`--bg`, `--surface`, `--active-bg`…) : `body.dark` ne redéfinit plus que les variables, les ~24 règles de override sont supprimées
 - Stockage centralisé : constantes `LS` + helpers `lsGet` / `lsSet` / `lsGetJSON` / `lsSetJSON` (clés inchangées, données des utilisateurs conservées)

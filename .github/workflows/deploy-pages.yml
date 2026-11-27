@@ -20,12 +20,23 @@ jobs:
     steps:
       - name: Récupérer le code
         uses: actions/checkout@v4
+      - name: Installer Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Vérifier la syntaxe des sources
+        run: node --check src/app.js && node --check src/sw.js && node --check build.mjs
+      - name: Reconstruire et vérifier que les fichiers générés sont à jour
+        run: |
+          node build.mjs
+          git diff --exit-code -- index.html sw.js
       - name: Configurer GitHub Pages
         uses: actions/configure-pages@v5
       - name: Préparer le site statique
         run: |
           mkdir -p _site
-          cp index.html sw.js vocabulaire-anglais.json vocabulaire-allemand.json README.md CHANGELOG.md .nojekyll _site/
+          cp index.html sw.js README.md CHANGELOG.md .nojekyll _site/
+          cp data/vocabulaire-anglais.json data/vocabulaire-allemand.json _site/
       - name: Téléverser le site (artifact)
         uses: actions/upload-pages-artifact@v3
         with:
