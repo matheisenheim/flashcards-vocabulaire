@@ -4,6 +4,12 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v22.3.0 — Menu des langues + carte adaptative
+- La barre d'onglets remplacée par un **menu déroulant** (`select#langMenu`) : Anglais / Allemand / Français / Tableau de bord, synchronisé avec la vue active
+- **Carte de hauteur adaptative** : `.scene` en `clamp(260px, 55vh, 480px)` (s'adapte à la hauteur d'écran, bornée)
+- CSS : règles `.tabs`/`.tab` supprimées, style `.menurow` ajouté
+- 1 nouveau test (`setTab` sur les 4 vues) : 14/14 OK
+
 ## v22.2.0 — Thème automne chaud + sobriété
 - 3ᵉ thème « automne » (chaud/sobre, tons pierre/ambré) : simple bloc de variables CSS `body.autumn`
 - Le bouton de thème cycle clair ☀️ → sombre 🌙 → automne 🍂, préférence persistée (`flashcards-theme`), migration de l'ancien réglage `flashcards-dark`

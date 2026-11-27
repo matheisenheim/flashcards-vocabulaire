@@ -1,4 +1,4 @@
-var VERSION = "v22.2.0";
+var VERSION = "v22.3.0";
 var LS = {
   dark: "flashcards-dark",
   theme: "flashcards-theme",
@@ -54,7 +54,7 @@ function toast(msg) {
 }
 function setTab(m) {
   mode = m;
-  ["Fr","En","De","Dash"].forEach(function (t) { byId("tab" + t).classList.toggle("active", mode === t.toLowerCase()); });
+  byId("langMenu").value = m;
   byId("viewFr").classList.toggle("hidden", mode !== "fr");
   byId("viewLang").classList.toggle("hidden", mode === "fr" || mode === "dash");
   byId("viewDash").classList.toggle("hidden", mode !== "dash");
@@ -62,10 +62,7 @@ function setTab(m) {
   if (mode === "fr") initFr();
   if (mode === "dash") renderDash();
 }
-byId("tabFr").onclick = function () { setTab("fr"); };
-byId("tabEn").onclick = function () { setTab("en"); };
-byId("tabDe").onclick = function () { setTab("de"); };
-byId("tabDash").onclick = function () { setTab("dash"); };
+byId("langMenu").onchange = function () { setTab(this.value); };
 
 /* ================= STATISTIQUES ================= */
 var STATS_KEY = LS.stats;

@@ -22,9 +22,10 @@ var document = {
     });
   },
   createElement: function () { return { value: "", textContent: "" }; },
+  createElementNS: function () { return { setAttribute: function () {}, appendChild: function () {}, style: {} }; },
   querySelector: function () { return { setAttribute: function () {} }; },
   addEventListener: function () {},
-  body: { classList: { toggle: function () {} } }
+  body: { classList: { toggle: function () {}, contains: function () { return false; } } }
 };
 var window = { addEventListener: function () {} };
 var navigator = {};
@@ -157,6 +158,18 @@ test("moteur unifié fr : recherche et filtre favoris", () => {
   app.fState.favOnly = true;
   app.frFavs = { pomme: true };
   assert.equal(JSON.stringify(app.frDeck().map((w) => w.t)), '["pomme"]');
+});
+
+test("menu des langues : setTab change de vue sans erreur", () => {
+  const app = loadApp();
+  app.setTab("de");
+  assert.equal(app.mode, "de");
+  app.setTab("fr");
+  assert.equal(app.mode, "fr");
+  app.setTab("dash");
+  assert.equal(app.mode, "dash");
+  app.setTab("en");
+  assert.equal(app.mode, "en");
 });
 
 test("thèmes : cycle clair/sombre/automne et migration de l'ancien réglage", () => {
