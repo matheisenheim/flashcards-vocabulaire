@@ -185,7 +185,7 @@
       <input type="file" id="importListFile" accept=".json,application/json" class="hidden" />
     </div>
     <p class="tip">Les statistiques sont enregistrées sur ce téléphone. Un mot est compté « lu » quand tu retournes sa carte pour voir la réponse.</p>
-    <p style="text-align:center;font-size:.7rem;color:#94a3b8;margin-top:18px;">Version v21 — installable comme application (PWA)</p>
+    <p style="text-align:center;font-size:.7rem;color:#94a3b8;margin-top:18px;">Version v22.0.0 — PWA hors ligne (service worker)</p>
   </div>
 
   <!-- FRANÇAIS -->
@@ -1987,6 +1987,12 @@ byId("darkBtn").addEventListener("click", function () {
 });
 
 setTab("en");
+
+if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  });
+}
 
 </script>
 </body>
