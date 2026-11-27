@@ -160,6 +160,14 @@ test("moteur unifié fr : recherche et filtre favoris", () => {
   assert.equal(JSON.stringify(app.frDeck().map((w) => w.t)), '["pomme"]');
 });
 
+test("options repliables : clé LS et initOpts sans erreur", () => {
+  const app = loadApp();
+  assert.equal(app.LS.opts, "flashcards-opts-v1");
+  app.initOpts();
+  const app2 = loadApp({ "flashcards-opts-v1": '{"lang":true}' });
+  assert.equal(app2.LS.opts, "flashcards-opts-v1");
+});
+
 test("menu des langues : setTab change de vue sans erreur", () => {
   const app = loadApp();
   app.setTab("de");

@@ -10,7 +10,8 @@ L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashca
 
 ## ✨ Fonctionnalités
 
-- **Trois langues** : dictionnaire français (à importer depuis un fichier JSON Larousse), listes anglais et allemand intégrées
+- **Trois langues** : dictionnaire français (à importer depuis un fichier JSON Larousse), listes anglais et allemand intégrées, choisies via le menu déroulant
+- **Options repliables** ⚙️ : catégorie, niveau, sens de lecture, examen, mélange… dans un menu qu'on peut fermer pour alléger l'écran
 - **Niveaux CEFR** : anglais et allemand classés A1 → C2
 - **Favoris** : étoile jaune ★ = favori, gris ☆ = non favori, filtre « Favoris » pour ne réviser que ses favoris
 - **Suivi de progression** : bouton « Je connais », pourcentage de mots sus, statistiques et examens (seuil de réussite 70 %)

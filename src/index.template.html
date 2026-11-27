@@ -82,16 +82,19 @@
 
     <div id="frStudy" class="hidden">
       <p class="sub">Recto : le mot — Verso : définitions, exemples, synonymes. Touche la carte pour la retourner.</p>
-      <input class="search" id="searchInput" type="search" placeholder="🔍 Chercher un mot…" />
-      <select class="search" id="frCatSelect"></select>
-      <div class="chips">
-        <span class="chip shuffle" id="frShuffle">🔀 Mélanger</span>
-        <span class="chip" id="frExamBtn">📝 Examen (20 mots)</span>
-        <span class="chip" id="frReset">↺ Recommencer</span>
-        <span class="chip" id="frFavBtn">&#11088; Favoris</span>
-        <span class="chip" id="frResetKnow">🗑 Réinitialiser « je connais »</span>
-        <span class="chip" id="frReimport">♻️ Changer de fichier</span>
-      </div>
+      <details class="opts" id="optsFr">
+        <summary>⚙️ Options</summary>
+        <input class="search" id="searchInput" type="search" placeholder="🔍 Chercher un mot…" />
+        <select class="search" id="frCatSelect"></select>
+        <div class="chips">
+          <span class="chip shuffle" id="frShuffle">🔀 Mélanger</span>
+          <span class="chip" id="frExamBtn">📝 Examen (20 mots)</span>
+          <span class="chip" id="frReset">↺ Recommencer</span>
+          <span class="chip" id="frFavBtn">&#11088; Favoris</span>
+          <span class="chip" id="frResetKnow">🗑 Réinitialiser « je connais »</span>
+          <span class="chip" id="frReimport">♻️ Changer de fichier</span>
+        </div>
+      </details>
       <div class="scene">
         <div class="card" id="frCard" tabindex="0" role="button" aria-label="Retourner la carte">
           <div class="face front">
@@ -124,16 +127,19 @@
   <!-- ANGLAIS / ALLEMAND -->
   <div id="viewLang" class="hidden">
     <p class="sub" id="langSub"></p>
-    <select class="search" id="catSelect"></select>
-    <select class="search" id="levelSelect" style="margin-top:-4px"></select>
-    <div class="chips">
-      <span class="chip lang active" id="langA">—</span>
-      <span class="chip lang" id="langB">—</span>
-      <span class="chip shuffle" id="shuffleBtn">🔀 Mélanger</span>
-      <span class="chip" id="examBtn">📝 Examen (20 mots)</span>
-      <span class="chip" id="resetBtn">↺ Recommencer</span>
-      <span class="chip" id="resetKnow">🗑 Réinitialiser « je connais »</span>
-    </div>
+    <details class="opts" id="optsLang">
+      <summary>⚙️ Options</summary>
+      <select class="search" id="catSelect"></select>
+      <select class="search" id="levelSelect"></select>
+      <div class="chips">
+        <span class="chip lang active" id="langA">—</span>
+        <span class="chip lang" id="langB">—</span>
+        <span class="chip shuffle" id="shuffleBtn">🔀 Mélanger</span>
+        <span class="chip" id="examBtn">📝 Examen (20 mots)</span>
+        <span class="chip" id="resetBtn">↺ Recommencer</span>
+        <span class="chip" id="resetKnow">🗑 Réinitialiser « je connais »</span>
+      </div>
+    </details>
     <div class="scene">
       <div class="card" id="card" tabindex="0" role="button" aria-label="Retourner la carte">
         <div class="face front">

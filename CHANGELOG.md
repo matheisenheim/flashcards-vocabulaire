@@ -4,6 +4,12 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v22.4.0 — Panneau d'options repliable
+- Toutes les options des vues (recherche, catégorie, niveau, sens EN↔FR, mélange, examen, recommencer, favoris, réinitialisations, changement de fichier) regroupées dans un `<details>` « ⚙️ Options » repliable par vue
+- État ouvert/fermé persisté (`flashcards-opts-v1`, par vue)
+- Style : pastille en pointillés centrée, flèche ▾/▴, `list-style` masquée
+- 1 nouveau test : 15/15 OK
+
 ## v22.3.0 — Menu des langues + carte adaptative
 - La barre d'onglets remplacée par un **menu déroulant** (`select#langMenu`) : Anglais / Allemand / Français / Tableau de bord, synchronisé avec la vue active
 - **Carte de hauteur adaptative** : `.scene` en `clamp(260px, 55vh, 480px)` (s'adapte à la hauteur d'écran, bornée)

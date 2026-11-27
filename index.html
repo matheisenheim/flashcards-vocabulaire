@@ -39,6 +39,11 @@
   }
   .wrap { max-width: 680px; margin: 0 auto; padding: 16px 14px 40px; }
   h1 { font-size: 1.25rem; text-align: center; margin: 0 0 10px; }
+  details.opts { margin-bottom: 10px; }
+  details.opts summary { cursor: pointer; list-style: none; user-select: none; width: fit-content; margin: 0 auto 10px; padding: 6px 14px; border: 1px dashed var(--border); border-radius: 999px; color: var(--muted); font-size: .8rem; font-weight: 600; }
+  details.opts summary::-webkit-details-marker { display: none; }
+  details.opts summary::after { content: " ▾"; }
+  details.opts[open] summary::after { content: " ▴"; }
   .menurow { display: flex; justify-content: center; margin-bottom: 14px; }
   .menurow select { width: 100%; max-width: 280px; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); color: var(--fg); font-size: .95rem; font-weight: 600; cursor: pointer; -webkit-appearance: none; appearance: none; }
   .sub { text-align: center; color: var(--muted); font-size: .78rem; margin: 0 0 12px; }
@@ -211,16 +216,19 @@
 
     <div id="frStudy" class="hidden">
       <p class="sub">Recto : le mot — Verso : définitions, exemples, synonymes. Touche la carte pour la retourner.</p>
-      <input class="search" id="searchInput" type="search" placeholder="🔍 Chercher un mot…" />
-      <select class="search" id="frCatSelect"></select>
-      <div class="chips">
-        <span class="chip shuffle" id="frShuffle">🔀 Mélanger</span>
-        <span class="chip" id="frExamBtn">📝 Examen (20 mots)</span>
-        <span class="chip" id="frReset">↺ Recommencer</span>
-        <span class="chip" id="frFavBtn">&#11088; Favoris</span>
-        <span class="chip" id="frResetKnow">🗑 Réinitialiser « je connais »</span>
-        <span class="chip" id="frReimport">♻️ Changer de fichier</span>
-      </div>
+      <details class="opts" id="optsFr">
+        <summary>⚙️ Options</summary>
+        <input class="search" id="searchInput" type="search" placeholder="🔍 Chercher un mot…" />
+        <select class="search" id="frCatSelect"></select>
+        <div class="chips">
+          <span class="chip shuffle" id="frShuffle">🔀 Mélanger</span>
+          <span class="chip" id="frExamBtn">📝 Examen (20 mots)</span>
+          <span class="chip" id="frReset">↺ Recommencer</span>
+          <span class="chip" id="frFavBtn">&#11088; Favoris</span>
+          <span class="chip" id="frResetKnow">🗑 Réinitialiser « je connais »</span>
+          <span class="chip" id="frReimport">♻️ Changer de fichier</span>
+        </div>
+      </details>
       <div class="scene">
         <div class="card" id="frCard" tabindex="0" role="button" aria-label="Retourner la carte">
           <div class="face front">
@@ -253,16 +261,19 @@
   <!-- ANGLAIS / ALLEMAND -->
   <div id="viewLang" class="hidden">
     <p class="sub" id="langSub"></p>
-    <select class="search" id="catSelect"></select>
-    <select class="search" id="levelSelect" style="margin-top:-4px"></select>
-    <div class="chips">
-      <span class="chip lang active" id="langA">—</span>
-      <span class="chip lang" id="langB">—</span>
-      <span class="chip shuffle" id="shuffleBtn">🔀 Mélanger</span>
-      <span class="chip" id="examBtn">📝 Examen (20 mots)</span>
-      <span class="chip" id="resetBtn">↺ Recommencer</span>
-      <span class="chip" id="resetKnow">🗑 Réinitialiser « je connais »</span>
-    </div>
+    <details class="opts" id="optsLang">
+      <summary>⚙️ Options</summary>
+      <select class="search" id="catSelect"></select>
+      <select class="search" id="levelSelect"></select>
+      <div class="chips">
+        <span class="chip lang active" id="langA">—</span>
+        <span class="chip lang" id="langB">—</span>
+        <span class="chip shuffle" id="shuffleBtn">🔀 Mélanger</span>
+        <span class="chip" id="examBtn">📝 Examen (20 mots)</span>
+        <span class="chip" id="resetBtn">↺ Recommencer</span>
+        <span class="chip" id="resetKnow">🗑 Réinitialiser « je connais »</span>
+      </div>
+    </details>
     <div class="scene">
       <div class="card" id="card" tabindex="0" role="button" aria-label="Retourner la carte">
         <div class="face front">
@@ -312,10 +323,11 @@
 </div>
 
 <script>
-var VERSION = "v22.3.0";
+var VERSION = "v22.4.0";
 var LS = {
   dark: "flashcards-dark",
   theme: "flashcards-theme",
+  opts: "flashcards-opts-v1",
   stats: "flashcards-stats-v1",
   known: { fr: "flashcards-fr-known-v1", en: "flashcards-en-known-v1", de: "flashcards-de-known-v1" },
   favs: { fr: "flashcards-fr-favs-v1" }
@@ -1132,6 +1144,21 @@ byId("themeBtn").addEventListener("click", function () {
   lsSet(LS.theme, theme);
   if (mode === "dash") renderDash();
 });
+
+function initOpts() {
+  var saved = lsGetJSON(LS.opts, {});
+  [["optsLang", "lang"], ["optsFr", "fr"]].forEach(function (p) {
+    var d = byId(p[0]);
+    if (!d) return;
+    d.open = !!saved[p[1]];
+    d.addEventListener("toggle", function () {
+      var s = lsGetJSON(LS.opts, {});
+      s[p[1]] = d.open;
+      lsSetJSON(LS.opts, s);
+    });
+  });
+}
+initOpts();
 
 byId("verFoot").textContent = "Version " + VERSION + " — PWA hors ligne (service worker)";
 setTab("en");

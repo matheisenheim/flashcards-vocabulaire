@@ -1,7 +1,8 @@
-var VERSION = "v22.3.0";
+var VERSION = "v22.4.0";
 var LS = {
   dark: "flashcards-dark",
   theme: "flashcards-theme",
+  opts: "flashcards-opts-v1",
   stats: "flashcards-stats-v1",
   known: { fr: "flashcards-fr-known-v1", en: "flashcards-en-known-v1", de: "flashcards-de-known-v1" },
   favs: { fr: "flashcards-fr-favs-v1" }
@@ -818,6 +819,21 @@ byId("themeBtn").addEventListener("click", function () {
   lsSet(LS.theme, theme);
   if (mode === "dash") renderDash();
 });
+
+function initOpts() {
+  var saved = lsGetJSON(LS.opts, {});
+  [["optsLang", "lang"], ["optsFr", "fr"]].forEach(function (p) {
+    var d = byId(p[0]);
+    if (!d) return;
+    d.open = !!saved[p[1]];
+    d.addEventListener("toggle", function () {
+      var s = lsGetJSON(LS.opts, {});
+      s[p[1]] = d.open;
+      lsSetJSON(LS.opts, s);
+    });
+  });
+}
+initOpts();
 
 byId("verFoot").textContent = "Version " + VERSION + " — PWA hors ligne (service worker)";
 setTab("en");

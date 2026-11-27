@@ -24,6 +24,11 @@
   }
   .wrap { max-width: 680px; margin: 0 auto; padding: 16px 14px 40px; }
   h1 { font-size: 1.25rem; text-align: center; margin: 0 0 10px; }
+  details.opts { margin-bottom: 10px; }
+  details.opts summary { cursor: pointer; list-style: none; user-select: none; width: fit-content; margin: 0 auto 10px; padding: 6px 14px; border: 1px dashed var(--border); border-radius: 999px; color: var(--muted); font-size: .8rem; font-weight: 600; }
+  details.opts summary::-webkit-details-marker { display: none; }
+  details.opts summary::after { content: " ▾"; }
+  details.opts[open] summary::after { content: " ▴"; }
   .menurow { display: flex; justify-content: center; margin-bottom: 14px; }
   .menurow select { width: 100%; max-width: 280px; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); color: var(--fg); font-size: .95rem; font-weight: 600; cursor: pointer; -webkit-appearance: none; appearance: none; }
   .sub { text-align: center; color: var(--muted); font-size: .78rem; margin: 0 0 12px; }
