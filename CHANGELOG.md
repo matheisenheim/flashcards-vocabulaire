@@ -4,6 +4,14 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v23.1.0 — Pages responsives pleine hauteur
+- Cause du « bas vide » : la carte était dimensionnée en `vh` (hauteur max du navigateur mobile) → la page dépassait la zone visible et on pouvait scroller dans du vide
+- `body`/`wrap` en flex colonne avec `min-height: 100dvh` (fallback `100vh`) : le fond couvre toujours l'écran visible
+- Vues cartes (EN/DE/FR) en flex : `.scene` remplit l'espace restant (`flex: 1; min-height: 240px`) au lieu de `clamp(...vh...)` → plus de scroll inutile ni d'espace vide en bas
+- `viewport-fit=cover` + marges `env(safe-area-inset-*)` (encoches), `overflow-x: clip`, `90dvh` pour la modale d'examen
+- Media query ≤ 420 px : titre/boutons/mots/boutons d'action compactés
+- 1 assertion E2E ajoutée (viewport + règles flex/dvh) : 16 unitaires + 8 E2E OK
+
 ## v23.0.1 — Boutons ℹ️/thème dans l'en-tête
 - Les boutons Aide ℹ️ et thème ☀️/🌙/🍂 étaient en `position: fixed` et chevauchaient le contenu (titre, menu, carte) sur petit écran
 - Ils sont maintenant dans une ligne d'en-tête `.head` (flex, à côté du titre) : plus de superposition, à toute taille d'écran

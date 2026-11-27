@@ -1,4 +1,4 @@
-var VERSION = "v23.0.1";
+var VERSION = "v23.1.0";
 var LS = {
   dark: "flashcards-dark",
   theme: "flashcards-theme",

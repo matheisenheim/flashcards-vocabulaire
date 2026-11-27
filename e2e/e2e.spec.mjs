@@ -32,6 +32,10 @@ test("E2E : démarrage en anglais, carte affichée, version en pied de page", as
   assert.match(doc.querySelector("h1").textContent, /Flashcards/);
   assert.equal(doc.getElementById("dueCount").textContent, "0");
   assert.equal(doc.getElementById("viewLang").classList.contains("hidden"), false);
+  assert.match(doc.querySelector('meta[name="viewport"]').content, /viewport-fit=cover/);
+  const css = doc.querySelector("style").textContent;
+  assert.match(css, /min-height: 100dvh/);
+  assert.match(css, /\.scene \{[^}]*flex: 1 1 auto/);
   dom.window.close();
 });
 
