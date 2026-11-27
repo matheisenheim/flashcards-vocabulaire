@@ -6,6 +6,8 @@ Application **mono-fichier HTML** pour réviser du vocabulaire **français**, **
 
 L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashcards-vocabulaire](https://matheisenheim.github.io/flashcards-vocabulaire/)** (servie en HTTPS depuis la branche `main`, racine du dépôt). Toutes les données restent locales au navigateur, comme pour le fichier ouvert en local.
 
+**Déploiement automatique** : à chaque push sur `main`, le workflow GitHub Actions [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) publie le site (source Pages réglée sur « GitHub Actions » dans Settings → Pages).
+
 ## ✨ Fonctionnalités
 
 - **Trois langues** : dictionnaire français (à importer depuis un fichier JSON Larousse), listes anglais et allemand intégrées
