@@ -1,0 +1,2788 @@
+[
+ [
+  "der",
+  "le (masc.), article défini",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "die",
+  "la (fém.) ; les (pl.)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "das",
+  "le/neutre ; ça",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "ein",
+  "un, un (masc./neutre)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "eine",
+  "une (fém.)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "ich",
+  "je",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "du",
+  "tu",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "er",
+  "il",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "sie",
+  "elle ; ils/elles (Sie = vous de politesse)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "es",
+  "il/elle (neutre) ; ça",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "wir",
+  "nous",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "ihr",
+  "vous (pl.)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "mich",
+  "me (COD)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "dich",
+  "te (COD)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "mir",
+  "me (COI)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "dir",
+  "te (COI)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "ihn",
+  "le (COD)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "ihm",
+  "lui (COI)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "uns",
+  "nous (COD/COI)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "euch",
+  "vous (COD/COI, pl.)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "mein",
+  "mon, ma",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "dein",
+  "ton, ta",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "sein",
+  "son, sa (à lui)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "unser",
+  "notre",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "euer",
+  "votre (pl.)",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "dieser",
+  "celui-ci, ce (masc.)",
+  "articles",
+  "",
+  "A2"
+ ],
+ [
+  "wer",
+  "qui",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "was",
+  "quoi",
+  "articles",
+  "",
+  "A1"
+ ],
+ [
+  "sein",
+  "être",
+  "verbes",
+  "ist/sind – war/waren – gewesen",
+  "A1"
+ ],
+ [
+  "haben",
+  "avoir",
+  "verbes",
+  "hat/hatte – gehabt",
+  "A1"
+ ],
+ [
+  "werden",
+  "devenir ; futur ; passif",
+  "verbes",
+  "wird/wurde – geworden",
+  "A1"
+ ],
+ [
+  "können",
+  "pouvoir (capacité)",
+  "verbes",
+  "konnte – gekonnt",
+  "A1"
+ ],
+ [
+  "müssen",
+  "devoir",
+  "verbes",
+  "musste – gemusst",
+  "A1"
+ ],
+ [
+  "wollen",
+  "vouloir",
+  "verbes",
+  "wollte – gewollt",
+  "A1"
+ ],
+ [
+  "sollen",
+  "devoir (conseil, ordre)",
+  "verbes",
+  "sollte – gesollt",
+  "A1"
+ ],
+ [
+  "dürfen",
+  "avoir le droit de",
+  "verbes",
+  "durfte – gedurft",
+  "A1"
+ ],
+ [
+  "mögen",
+  "aimer ; möcht- = voudrais",
+  "verbes",
+  "mochte – gemocht",
+  "A1"
+ ],
+ [
+  "gehen",
+  "aller",
+  "verbes",
+  "ging – gegangen",
+  "A1"
+ ],
+ [
+  "kommen",
+  "venir",
+  "verbes",
+  "kam – gekommen",
+  "A1"
+ ],
+ [
+  "machen",
+  "faire",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "sehen",
+  "voir",
+  "verbes",
+  "sah – gesehen",
+  "A1"
+ ],
+ [
+  "geben",
+  "donner ; il y a (es gibt)",
+  "verbes",
+  "gab – gegeben",
+  "A1"
+ ],
+ [
+  "nehmen",
+  "prendre",
+  "verbes",
+  "nahm – genommen",
+  "A1"
+ ],
+ [
+  "finden",
+  "trouver",
+  "verbes",
+  "fand – gefunden",
+  "A1"
+ ],
+ [
+  "stehen",
+  "être debout",
+  "verbes",
+  "stand – gestanden",
+  "A1"
+ ],
+ [
+  "sitzen",
+  "être assis",
+  "verbes",
+  "saß – gesessen",
+  "A1"
+ ],
+ [
+  "liegen",
+  "être couché ; se trouver",
+  "verbes",
+  "lag – gelegen",
+  "A1"
+ ],
+ [
+  "sagen",
+  "dire",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "sprechen",
+  "parler",
+  "verbes",
+  "sprach – gesprochen",
+  "A1"
+ ],
+ [
+  "essen",
+  "manger",
+  "verbes",
+  "aß – gegessen",
+  "A1"
+ ],
+ [
+  "trinken",
+  "boire",
+  "verbes",
+  "trank – getrunken",
+  "A1"
+ ],
+ [
+  "fahren",
+  "rouler, voyager (en voiture)",
+  "verbes",
+  "fuhr – gefahren",
+  "A1"
+ ],
+ [
+  "lesen",
+  "lire",
+  "verbes",
+  "las – gelesen",
+  "A1"
+ ],
+ [
+  "schreiben",
+  "écrire",
+  "verbes",
+  "schrieb – geschrieben",
+  "A1"
+ ],
+ [
+  "verstehen",
+  "comprendre",
+  "verbes",
+  "verstand – verstanden",
+  "A1"
+ ],
+ [
+  "denken",
+  "penser",
+  "verbes",
+  "dachte – gedacht",
+  "A1"
+ ],
+ [
+  "wissen",
+  "savoir",
+  "verbes",
+  "wusste – gewusst",
+  "A1"
+ ],
+ [
+  "kennen",
+  "connaître",
+  "verbes",
+  "kannte – gekannt",
+  "A1"
+ ],
+ [
+  "leben",
+  "vivre",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "lieben",
+  "aimer",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "arbeiten",
+  "travailler",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "spielen",
+  "jouer",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "lernen",
+  "apprendre",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "kaufen",
+  "acheter",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "helfen",
+  "aider",
+  "verbes",
+  "half – geholfen",
+  "A1"
+ ],
+ [
+  "bringen",
+  "apporter",
+  "verbes",
+  "brachte – gebracht",
+  "A1"
+ ],
+ [
+  "bleiben",
+  "rester",
+  "verbes",
+  "blieb – geblieben",
+  "A1"
+ ],
+ [
+  "bekommen",
+  "recevoir",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "glauben",
+  "croire",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "fragen",
+  "demander",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "antworten",
+  "répondre",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "hören",
+  "entendre",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "singen",
+  "chanter",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "tanzen",
+  "danser",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "reisen",
+  "voyager",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "wohnen",
+  "habiter",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "treffen",
+  "rencontrer",
+  "verbes",
+  "traf – getroffen",
+  "A1"
+ ],
+ [
+  "schlafen",
+  "dormir",
+  "verbes",
+  "schlief – geschlafen",
+  "A1"
+ ],
+ [
+  "laufen",
+  "courir ; marcher",
+  "verbes",
+  "lief – gelaufen",
+  "A1"
+ ],
+ [
+  "fliegen",
+  "voler, prendre l'avion",
+  "verbes",
+  "flog – geflogen",
+  "A1"
+ ],
+ [
+  "schwimmen",
+  "nager",
+  "verbes",
+  "schwamm – geschwommen",
+  "A1"
+ ],
+ [
+  "anfangen",
+  "commencer",
+  "verbes",
+  "fing an – angefangen",
+  "A1"
+ ],
+ [
+  "aufhören",
+  "arrêter (de faire qch)",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "suchen",
+  "chercher",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "brauchen",
+  "avoir besoin de",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "zeigen",
+  "montrer",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "erklären",
+  "expliquer",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "beginnen",
+  "commencer",
+  "verbes",
+  "begann – begonnen",
+  "A1"
+ ],
+ [
+  "tragen",
+  "porter ; porter (vêtement)",
+  "verbes",
+  "trug – getragen",
+  "A1"
+ ],
+ [
+  "ziehen",
+  "tirer",
+  "verbes",
+  "zog – gezogen",
+  "A1"
+ ],
+ [
+  "legen",
+  "poser (à plat)",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "stellen",
+  "mettre (debout)",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "öffnen",
+  "ouvrir",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "schließen",
+  "fermer",
+  "verbes",
+  "schloss – geschlossen",
+  "A1"
+ ],
+ [
+  "kochen",
+  "cuisiner, cuire",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "lachen",
+  "rire",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "warten",
+  "attendre",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "bezahlen",
+  "payer",
+  "verbes",
+  "",
+  "A2"
+ ],
+ [
+  "kosten",
+  "coûter",
+  "verbes",
+  "",
+  "A1"
+ ],
+ [
+  "aufstehen",
+  "se lever",
+  "verbes",
+  "stand auf – aufgestanden",
+  "A1"
+ ],
+ [
+  "einsteigen",
+  "monter (dans un transport)",
+  "verbes",
+  "stieg ein – eingestiegen",
+  "A1"
+ ],
+ [
+  "aussteigen",
+  "descendre (d'un transport)",
+  "verbes",
+  "stieg aus – ausgestiegen",
+  "A1"
+ ],
+ [
+  "benutzen",
+  "utiliser",
+  "verbes",
+  "",
+  "A2"
+ ],
+ [
+  "tun",
+  "faire",
+  "verbes",
+  "tat – getan",
+  "A1"
+ ],
+ [
+  "schmecken",
+  "avoir bon goût",
+  "verbes",
+  "",
+  "A2"
+ ],
+ [
+  "telefonieren",
+  "téléphoner",
+  "verbes",
+  "",
+  "A2"
+ ],
+ [
+  "kennenlernen",
+  "faire connaissance",
+  "verbes",
+  "kennen lernte – kennengelernt",
+  "A2"
+ ],
+ [
+  "einladen",
+  "inviter",
+  "verbes",
+  "lud ein – eingeladen",
+  "A2"
+ ],
+ [
+  "in",
+  "dans (datif) ; en (accusatif = mouvement)",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "an",
+  "à, sur (contact vertical)",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "auf",
+  "sur, au-dessus",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "unter",
+  "sous ; parmi",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "über",
+  "au-dessus de ; sur (thème)",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "vor",
+  "devant ; avant ; il y a (temps)",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "hinter",
+  "derrière",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "neben",
+  "à côté de",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "zwischen",
+  "entre",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "mit",
+  "avec",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "ohne",
+  "sans",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "für",
+  "pour",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "um",
+  "autour de ; à (heure)",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "durch",
+  "à travers",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "gegen",
+  "contre ; environ",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "nach",
+  "après ; vers (direction) ; selon",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "von",
+  "de (provenance)",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "zu",
+  "à, chez",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "bei",
+  "chez ; près de",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "aus",
+  "de (origine) ; hors de",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "seit",
+  "depuis",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "bis",
+  "jusqu'à",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "und",
+  "et",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "oder",
+  "ou",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "aber",
+  "mais",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "denn",
+  "car",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "weil",
+  "parce que",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "dass",
+  "que (conjonction)",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "wenn",
+  "si ; quand (répétition)",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "als",
+  "quand (passé unique) ; que (comparaison)",
+  "prepositions",
+  "",
+  "A1"
+ ],
+ [
+  "nicht",
+  "ne… pas",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "ja",
+  "oui",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "nein",
+  "non",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "auch",
+  "aussi",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "sehr",
+  "très",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "nur",
+  "seulement",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "noch",
+  "encore ; pas encore",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "schon",
+  "déjà",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "wieder",
+  "encore une fois",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "immer",
+  "toujours",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "nie",
+  "jamais",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "oft",
+  "souvent",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "manchmal",
+  "parfois",
+  "adverbes",
+  "",
+  "A2"
+ ],
+ [
+  "jetzt",
+  "maintenant",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "dann",
+  "alors, ensuite",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "hier",
+  "ici",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "dort",
+  "là-bas",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "da",
+  "là ; ici (voici/voilà)",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "so",
+  "ainsi, tellement",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "vielleicht",
+  "peut-être",
+  "adverbes",
+  "",
+  "A2"
+ ],
+ [
+  "leider",
+  "malheureusement",
+  "adverbes",
+  "",
+  "A2"
+ ],
+ [
+  "gern",
+  "volontiers, avec plaisir",
+  "adverbes",
+  "",
+  "A2"
+ ],
+ [
+  "zusammen",
+  "ensemble",
+  "adverbes",
+  "",
+  "A2"
+ ],
+ [
+  "viel",
+  "beaucoup",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "wenig",
+  "peu",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "bald",
+  "bientôt",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "heute",
+  "aujourd'hui",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "morgen",
+  "demain",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "gestern",
+  "hier",
+  "adverbes",
+  "",
+  "A1"
+ ],
+ [
+  "endlich",
+  "enfin",
+  "adverbes",
+  "",
+  "A2"
+ ],
+ [
+  "gut",
+  "bon, bien",
+  "adjectifs",
+  "besser – am besten",
+  "A1"
+ ],
+ [
+  "neu",
+  "nouveau",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "alt",
+  "vieux, ancien",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "groß",
+  "grand, gros",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "klein",
+  "petit",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "jung",
+  "jeune",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "schön",
+  "beau, joli",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "fertig",
+  "prêt, terminé",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "schlecht",
+  "mauvais",
+  "adjectifs",
+  "schlechter – am schlechtesten",
+  "A1"
+ ],
+ [
+  "krank",
+  "malade",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "kaputt",
+  "cassé, en panne",
+  "adjectifs",
+  "",
+  "A2"
+ ],
+ [
+  "pünktlich",
+  "ponctuel",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "leicht",
+  "léger ; facile",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "schwer",
+  "lourd ; difficile",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "ruhig",
+  "calme",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "klar",
+  "clair, évident",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "richtig",
+  "correct",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "falsch",
+  "faux",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "wichtig",
+  "important",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "möglich",
+  "possible",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "voll",
+  "plein",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "leer",
+  "vide",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "offen",
+  "ouvert",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "frei",
+  "libre, gratuit",
+  "adjectifs",
+  "",
+  "A2"
+ ],
+ [
+  "teuer",
+  "cher",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "billig",
+  "bon marché",
+  "adjectifs",
+  "",
+  "A2"
+ ],
+ [
+  "glücklich",
+  "heureux",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "traurig",
+  "triste",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "einfach",
+  "simple",
+  "adjectifs",
+  "",
+  "A2"
+ ],
+ [
+  "schwierig",
+  "difficile",
+  "adjectifs",
+  "",
+  "A2"
+ ],
+ [
+  "lang",
+  "long",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "kurz",
+  "court",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "heiß",
+  "chaud, brûlant",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "kalt",
+  "froid",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "warm",
+  "tiède, chaud",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "hoch",
+  "haut",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "müde",
+  "fatigué",
+  "adjectifs",
+  "",
+  "A1"
+ ],
+ [
+  "der Mann",
+  "homme",
+  "noms",
+  "pl. die Männer",
+  "A1"
+ ],
+ [
+  "die Frau",
+  "femme",
+  "noms",
+  "pl. die Frauen",
+  "A1"
+ ],
+ [
+  "das Kind",
+  "enfant",
+  "noms",
+  "pl. die Kinder",
+  "A1"
+ ],
+ [
+  "die Familie",
+  "famille",
+  "noms",
+  "pl. die Familien",
+  "A1"
+ ],
+ [
+  "das Haus",
+  "maison",
+  "noms",
+  "pl. die Häuser",
+  "A1"
+ ],
+ [
+  "die Wohnung",
+  "appartement",
+  "noms",
+  "pl. die Wohnungen",
+  "A1"
+ ],
+ [
+  "die Stadt",
+  "ville",
+  "noms",
+  "pl. die Städte",
+  "A1"
+ ],
+ [
+  "das Dorf",
+  "village",
+  "noms",
+  "pl. die Dörfer",
+  "A1"
+ ],
+ [
+  "das Land",
+  "pays ; campagne",
+  "noms",
+  "pl. die Länder",
+  "A1"
+ ],
+ [
+  "die Welt",
+  "monde",
+  "noms",
+  "pl. die Welten",
+  "A1"
+ ],
+ [
+  "die Zeit",
+  "temps",
+  "noms",
+  "pl. die Zeiten",
+  "A1"
+ ],
+ [
+  "der Tag",
+  "jour",
+  "noms",
+  "pl. die Tage",
+  "A1"
+ ],
+ [
+  "die Woche",
+  "semaine",
+  "noms",
+  "pl. die Wochen",
+  "A1"
+ ],
+ [
+  "der Monat",
+  "mois",
+  "noms",
+  "pl. die Monate",
+  "A1"
+ ],
+ [
+  "das Jahr",
+  "année",
+  "noms",
+  "pl. die Jahre",
+  "A1"
+ ],
+ [
+  "der Morgen",
+  "matin",
+  "noms",
+  "pl. die Morgen",
+  "A1"
+ ],
+ [
+  "der Abend",
+  "soir",
+  "noms",
+  "pl. die Abende",
+  "A1"
+ ],
+ [
+  "die Nacht",
+  "nuit",
+  "noms",
+  "pl. die Nächte",
+  "A1"
+ ],
+ [
+  "der Freund",
+  "ami",
+  "noms",
+  "pl. die Freunde",
+  "A1"
+ ],
+ [
+  "das Wort",
+  "mot",
+  "noms",
+  "pl. die Wörter (mots) / Worte (paroles)",
+  "A1"
+ ],
+ [
+  "das Buch",
+  "livre",
+  "noms",
+  "pl. die Bücher",
+  "A1"
+ ],
+ [
+  "die Schule",
+  "école",
+  "noms",
+  "pl. die Schulen",
+  "A1"
+ ],
+ [
+  "die Arbeit",
+  "travail",
+  "noms",
+  "pl. die Arbeiten",
+  "A1"
+ ],
+ [
+  "das Geld",
+  "argent",
+  "noms",
+  "indénombrable",
+  "A1"
+ ],
+ [
+  "das Wasser",
+  "eau",
+  "noms",
+  "pl. die Wasser (eaux)",
+  "A1"
+ ],
+ [
+  "das Essen",
+  "nourriture ; repas",
+  "noms",
+  "indénombrable (nourriture)",
+  "A1"
+ ],
+ [
+  "der Name",
+  "nom",
+  "noms",
+  "pl. die Namen",
+  "A1"
+ ],
+ [
+  "die Frage",
+  "question",
+  "noms",
+  "pl. die Fragen",
+  "A1"
+ ],
+ [
+  "die Antwort",
+  "réponse",
+  "noms",
+  "pl. die Antworten",
+  "A1"
+ ],
+ [
+  "die Leute",
+  "gens, personnes",
+  "noms",
+  "pluriel only",
+  "A1"
+ ],
+ [
+  "das Handy",
+  "téléphone (portable)",
+  "noms",
+  "pl. die Handys",
+  "A1"
+ ],
+ [
+  "der Schlüssel",
+  "clé",
+  "noms",
+  "pl. die Schlüssel",
+  "A1"
+ ],
+ [
+  "der Bahnhof",
+  "gare",
+  "noms",
+  "pl. die Bahnhöfe",
+  "A1"
+ ],
+ [
+  "die Straße",
+  "rue",
+  "noms",
+  "pl. die Straßen",
+  "A1"
+ ],
+ [
+  "das Frühstück",
+  "petit-déjeuner",
+  "noms",
+  "pl. die Frühstücke",
+  "A1"
+ ],
+ [
+  "der Arzt",
+  "médecin",
+  "noms",
+  "pl. die Ärzte",
+  "A1"
+ ],
+ [
+  "das Auto",
+  "voiture",
+  "noms",
+  "pl. die Autos",
+  "A1"
+ ],
+ [
+  "das Wetter",
+  "temps (météo)",
+  "noms",
+  "singulier seulement",
+  "A1"
+ ],
+ [
+  "die E-Mail",
+  "e-mail",
+  "noms",
+  "pl. die E-Mails",
+  "A1"
+ ],
+ [
+  "der Termin",
+  "rendez-vous",
+  "noms",
+  "pl. die Termine",
+  "A1"
+ ],
+ [
+  "das Zimmer",
+  "chambre, pièce",
+  "noms",
+  "pl. die Zimmer",
+  "A1"
+ ],
+ [
+  "der Regen",
+  "pluie",
+  "noms",
+  "singulier seulement",
+  "A1"
+ ],
+ [
+  "die Ausbildung",
+  "formation, apprentissage",
+  "noms",
+  "",
+  "B1"
+ ],
+ [
+  "der Beruf",
+  "mÃ©tier, profession",
+  "noms",
+  "pl. die Berufe",
+  "B1"
+ ],
+ [
+  "die Entscheidung",
+  "dÃ©cision",
+  "noms",
+  "pl. -en",
+  "B1"
+ ],
+ [
+  "die Entwicklung",
+  "dÃ©veloppement",
+  "noms",
+  "",
+  "B1"
+ ],
+ [
+  "die Erfahrung",
+  "expÃ©rience",
+  "noms",
+  "pl. -en",
+  "B1"
+ ],
+ [
+  "der Erfolg",
+  "succÃ¨s",
+  "noms",
+  "pl. -e",
+  "B1"
+ ],
+ [
+  "die Gefahr",
+  "danger",
+  "noms",
+  "pl. -en",
+  "B1"
+ ],
+ [
+  "die Gesundheit",
+  "santÃ©",
+  "noms",
+  "",
+  "B1"
+ ],
+ [
+  "die Herausforderung",
+  "dÃ©fi",
+  "noms",
+  "pl. -en",
+  "B1"
+ ],
+ [
+  "die Hoffnung",
+  "espoir",
+  "noms",
+  "pl. -en",
+  "B1"
+ ],
+ [
+  "die Krankheit",
+  "maladie",
+  "noms",
+  "pl. -en",
+  "B1"
+ ],
+ [
+  "die Umwelt",
+  "environnement",
+  "noms",
+  "",
+  "B1"
+ ],
+ [
+  "der Verkehr",
+  "circulation, trafic",
+  "noms",
+  "",
+  "B1"
+ ],
+ [
+  "die Wohnungssuche",
+  "recherche de logement",
+  "noms",
+  "",
+  "B1"
+ ],
+ [
+  "sich bewerben",
+  "postuler",
+  "verbes",
+  "bewirbt â bewarb â beworben",
+  "B1"
+ ],
+ [
+  "beachten",
+  "remarquer, respecter",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "beeinflussen",
+  "influencer",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "berichten",
+  "rapporter, informer",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "betonen",
+  "souligner",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "entscheiden",
+  "dÃ©cider",
+  "verbes",
+  "entschied â entschieden",
+  "B1"
+ ],
+ [
+  "entwickeln",
+  "dÃ©velopper",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "empfehlen",
+  "recommander",
+  "verbes",
+  "empfahl â empfohlen",
+  "B1"
+ ],
+ [
+  "erfahren",
+  "apprendre (une nouvelle), Ã©prouver",
+  "verbes",
+  "erfuhr â erfahren",
+  "B1"
+ ],
+ [
+  "erlauben",
+  "permettre",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "erledigen",
+  "accomplir, rÃ©gler",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "fehlen",
+  "manquer",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "gehÃ¶ren",
+  "appartenir Ã ",
+  "verbes",
+  "gehÃ¶ren + datif",
+  "B1"
+ ],
+ [
+  "interessieren",
+  "intÃ©resser (sich interessieren fÃ¼r)",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "merken",
+  "remarquer, retenir",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "prÃ¼fen",
+  "vÃ©rifier, contrÃ´ler",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "retten",
+  "sauver",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "sparen",
+  "Ã©conomiser",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "stÃ¶ren",
+  "dÃ©ranger",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "teilnehmen",
+  "participer Ã ",
+  "verbes",
+  "nimmt teil â nahm teil â teilgenommen",
+  "B1"
+ ],
+ [
+  "Ã¼berzeugen",
+  "convaincre",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "unterrichten",
+  "enseigner",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "vermeiden",
+  "Ã©viter",
+  "verbes",
+  "vermied â vermieden",
+  "B1"
+ ],
+ [
+  "verdienen",
+  "gagner (de l'argent), mÃ©riter",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "vertrauen",
+  "faire confiance Ã ",
+  "verbes",
+  "vertrauen + datif",
+  "B1"
+ ],
+ [
+  "warnen",
+  "avertir",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "wechseln",
+  "changer, Ã©changer",
+  "verbes",
+  "",
+  "B1"
+ ],
+ [
+  "sich gewÃ¶hnen an",
+  "s'habituer Ã ",
+  "verbes",
+  "gewÃ¶hnt sich â gewÃ¶hnte sich",
+  "B1"
+ ],
+ [
+  "ehrlich",
+  "honnÃªte",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "geduldig",
+  "patient",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "gefÃ¤hrlich",
+  "dangereux",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "hÃ¶flich",
+  "poli",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "mutig",
+  "courageux",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "ordentlich",
+  "soigneux, rangÃ©",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "peinlich",
+  "gÃªnant, embarrassant",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "schÃ¤dlich",
+  "nocif",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "selbststÃ¤ndig",
+  "indÃ©pendant, autonome",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "unbekannt",
+  "inconnu",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "ungewÃ¶hnlich",
+  "inhabituel",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "zuverlÃ¤ssig",
+  "fiable",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "verboten",
+  "interdit",
+  "adjectifs",
+  "",
+  "B1"
+ ],
+ [
+  "der Begriff",
+  "notion, concept",
+  "noms",
+  "pl. -e",
+  "B2"
+ ],
+ [
+  "der Einfluss",
+  "influence",
+  "noms",
+  "pl. die EinflÃ¼sse",
+  "B2"
+ ],
+ [
+  "die Erkenntnis",
+  "connaissance, constat",
+  "noms",
+  "pl. -se",
+  "B2"
+ ],
+ [
+  "die FÃ¤higkeit",
+  "capacitÃ©, aptitude",
+  "noms",
+  "pl. -en",
+  "B2"
+ ],
+ [
+  "der Faktor",
+  "facteur",
+  "noms",
+  "pl. -en",
+  "B2"
+ ],
+ [
+  "die Folge",
+  "consÃ©quence, suite",
+  "noms",
+  "pl. -n",
+  "B2"
+ ],
+ [
+  "der Fortschritt",
+  "progrÃ¨s",
+  "noms",
+  "pl. -e",
+  "B2"
+ ],
+ [
+  "das VerhÃ¤ltnis",
+  "rapport, relation",
+  "noms",
+  "pl. -se",
+  "B2"
+ ],
+ [
+  "die Voraussetzung",
+  "condition prÃ©alable",
+  "noms",
+  "pl. -en",
+  "B2"
+ ],
+ [
+  "der Zusammenhang",
+  "contexte, lien",
+  "noms",
+  "pl. -e",
+  "B2"
+ ],
+ [
+  "anerkennen",
+  "reconnaÃ®tre",
+  "verbes",
+  "erkannte an â anerkannt",
+  "B2"
+ ],
+ [
+  "aufgeben",
+  "abandonner ; expÃ©dier",
+  "verbes",
+  "gab auf â aufgegeben",
+  "B2"
+ ],
+ [
+  "beitragen",
+  "contribuer Ã ",
+  "verbes",
+  "trÃ¤gt bei â trug bei â beigetragen",
+  "B2"
+ ],
+ [
+  "berÃ¼cksichtigen",
+  "prendre en compte",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "betreffen",
+  "concerner",
+  "verbes",
+  "betrifft â betraf â betroffen",
+  "B2"
+ ],
+ [
+  "bestehen aus",
+  "se composer de",
+  "verbes",
+  "besteht aus",
+  "B2"
+ ],
+ [
+  "durchsetzen",
+  "imposer, faire prÃ©valoir",
+  "verbes",
+  "setzte durch â durchgesetzt",
+  "B2"
+ ],
+ [
+  "einsetzen",
+  "employer, engager",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "entstehen",
+  "naÃ®tre, se crÃ©er",
+  "verbes",
+  "entstand â entstanden",
+  "B2"
+ ],
+ [
+  "erhÃ¶hen",
+  "augmenter, Ã©lever",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "feststellen",
+  "constater",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "fÃ¶rdern",
+  "promouvoir, encourager",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "handeln",
+  "agir, commercer",
+  "verbes",
+  "es handelt sich um",
+  "B2"
+ ],
+ [
+  "hemmen",
+  "freiner, entraver",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "hindern",
+  "empÃªcher",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "herstellen",
+  "fabriquer, Ã©tablir",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "verbessern",
+  "amÃ©liorer",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "vergleichen",
+  "comparer",
+  "verbes",
+  "verglich â verglichen",
+  "B2"
+ ],
+ [
+  "verhindern",
+  "empÃªcher",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "verlangen",
+  "exiger, demander",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "vermitteln",
+  "transmettre, mettre en relation",
+  "verbes",
+  "",
+  "B2"
+ ],
+ [
+  "verraten",
+  "trahir, rÃ©vÃ©ler",
+  "verbes",
+  "verriet â verraten",
+  "B2"
+ ],
+ [
+  "sich verlassen auf",
+  "compter sur, se fier Ã ",
+  "verbes",
+  "verlÃ¤sst sich â verlieÃ sich",
+  "B2"
+ ],
+ [
+  "anspruchsvoll",
+  "exigeant",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "angemessen",
+  "appropriÃ©",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "erheblich",
+  "considÃ©rable",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "grundsÃ¤tzlich",
+  "fondamental, en principe",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "maÃgeblich",
+  "dÃ©cisif, dÃ©terminant",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "problematisch",
+  "problÃ©matique",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "sinnvoll",
+  "sensÃ©, utile",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "umstritten",
+  "controversÃ©",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "unvermeidlich",
+  "inÃ©vitable",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "vorteilhaft",
+  "avantageux",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "notwendig",
+  "nÃ©cessaire",
+  "adjectifs",
+  "",
+  "B2"
+ ],
+ [
+  "die Bereitschaft",
+  "disposition, bonne volontÃ©",
+  "noms",
+  "",
+  "C1"
+ ],
+ [
+  "die Begeisterung",
+  "enthousiasme",
+  "noms",
+  "",
+  "C1"
+ ],
+ [
+  "der Eindruck",
+  "impression",
+  "noms",
+  "pl. die EindrÃ¼cke",
+  "C1"
+ ],
+ [
+  "die Einsicht",
+  "comprÃ©hension, luciditÃ©",
+  "noms",
+  "pl. -en",
+  "C1"
+ ],
+ [
+  "die EmpÃ¶rung",
+  "indignation",
+  "noms",
+  "",
+  "C1"
+ ],
+ [
+  "die Gelassenheit",
+  "calme, sÃ©rÃ©nitÃ©",
+  "noms",
+  "",
+  "C1"
+ ],
+ [
+  "der Sachverhalt",
+  "Ã©tat de fait, situation",
+  "noms",
+  "pl. -e",
+  "C1"
+ ],
+ [
+  "die Ãbereinkunft",
+  "accord",
+  "noms",
+  "pl. -Ã¼fte",
+  "C1"
+ ],
+ [
+  "die Vernunft",
+  "raison",
+  "noms",
+  "",
+  "C1"
+ ],
+ [
+  "das Vorurteil",
+  "prÃ©jugÃ©",
+  "noms",
+  "pl. -e",
+  "C1"
+ ],
+ [
+  "der Zweifel",
+  "doute",
+  "noms",
+  "pl. -",
+  "C1"
+ ],
+ [
+  "abschwÃ¤chen",
+  "attÃ©nuer",
+  "verbes",
+  "",
+  "C1"
+ ],
+ [
+  "anregen",
+  "stimuler",
+  "verbes",
+  "",
+  "C1"
+ ],
+ [
+  "bedingen",
+  "conditionner",
+  "verbes",
+  "",
+  "C1"
+ ],
+ [
+  "befÃ¼rworten",
+  "Ãªtre favorable Ã ",
+  "verbes",
+  "",
+  "C1"
+ ],
+ [
+  "sich entziehen",
+  "se soustraire Ã ",
+  "verbes",
+  "entzieht sich â entzog sich",
+  "C1"
+ ],
+ [
+  "gedeihen",
+  "prospÃ©rer, croÃ®tre",
+  "verbes",
+  "gedieh â gediehen",
+  "C1"
+ ],
+ [
+  "hervorheben",
+  "mettre en Ã©vidence",
+  "verbes",
+  "hob hervor â hervorgehoben",
+  "C1"
+ ],
+ [
+  "nahelegen",
+  "suggÃ©rer fortement",
+  "verbes",
+  "legte nahe â nahegelegt",
+  "C1"
+ ],
+ [
+  "abschwÃ¤chend",
+  "attÃ©nuant",
+  "adverbes",
+  "",
+  "C1"
+ ],
+ [
+  "beilÃ¤ufig",
+  "au passage, incidemment",
+  "adverbes",
+  "",
+  "C1"
+ ],
+ [
+  "bevorstehend",
+  "imminent, Ã  venir",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "gegenwÃ¤rtig",
+  "actuel, prÃ©sent",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "letztlich",
+  "en fin de compte",
+  "adverbes",
+  "",
+  "C1"
+ ],
+ [
+  "nachhaltig",
+  "durable",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "ruckhaltlos",
+  "sans rÃ©serve",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "skrupellos",
+  "sans scrupule",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "unbeirrt",
+  "inÃ©branlable",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "unerschÃ¼tterlich",
+  "inÃ©branlable",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "vorrangig",
+  "prioritaire",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "zeitgleich",
+  "simultanÃ©",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "zwingend",
+  "impÃ©ratif, contraignant",
+  "adjectifs",
+  "",
+  "C1"
+ ],
+ [
+  "das Dasein",
+  "existence, Ãªtre",
+  "noms",
+  "",
+  "C2"
+ ],
+ [
+  "die Eigenheit",
+  "particularitÃ©, singularitÃ©",
+  "noms",
+  "pl. -en",
+  "C2"
+ ],
+ [
+  "der Kitsch",
+  "kitsch",
+  "noms",
+  "",
+  "C2"
+ ],
+ [
+  "die MutmaÃung",
+  "supposition, conjecture",
+  "noms",
+  "pl. -en",
+  "C2"
+ ],
+ [
+  "die Raffinesse",
+  "raffinement",
+  "noms",
+  "",
+  "C2"
+ ],
+ [
+  "die Sehnsucht",
+  "nostalgie, dÃ©sir ardent",
+  "noms",
+  "pl. -Ã¼chte",
+  "C2"
+ ],
+ [
+  "der Skeptiker",
+  "sceptique",
+  "noms",
+  "",
+  "C2"
+ ],
+ [
+  "die Verbundenheit",
+  "attachement, lien",
+  "noms",
+  "",
+  "C2"
+ ],
+ [
+  "das Wesen",
+  "Ãªtre, essence",
+  "noms",
+  "",
+  "C2"
+ ],
+ [
+  "der Zeitgeist",
+  "esprit du temps",
+  "noms",
+  "",
+  "C2"
+ ],
+ [
+  "anmaÃend",
+  "arrogant, prÃ©somptueux",
+  "adjectifs",
+  "",
+  "C2"
+ ],
+ [
+  "ausschweifend",
+  "effrÃ©nÃ©, dÃ©bauchÃ©",
+  "adjectifs",
+  "",
+  "C2"
+ ],
+ [
+  "durchweg",
+  "sans exception",
+  "adverbes",
+  "",
+  "C2"
+ ],
+ [
+  "fragwÃ¼rdig",
+  "douteux, contestable",
+  "adjectifs",
+  "",
+  "C2"
+ ],
+ [
+  "hanebÃ¼chen",
+  "Ã©hontÃ©, invraisemblable",
+  "adjectifs",
+  "",
+  "C2"
+ ],
+ [
+  "konsequenterweise",
+  "logiquement, par consÃ©quent",
+  "adverbes",
+  "",
+  "C2"
+ ],
+ [
+  "leidenschaftlich",
+  "passionnÃ©",
+  "adjectifs",
+  "",
+  "C2"
+ ],
+ [
+  "rÃ¼cksichtslos",
+  "sans Ã©gard, inconsidÃ©rÃ©",
+  "adjectifs",
+  "",
+  "C2"
+ ],
+ [
+  "verblÃ¼ffend",
+  "stupÃ©fiant",
+  "adjectifs",
+  "",
+  "C2"
+ ],
+ [
+  "vordergrÃ¼ndig",
+  "superficiel, apparent",
+  "adjectifs",
+  "",
+  "C2"
+ ]
+]
