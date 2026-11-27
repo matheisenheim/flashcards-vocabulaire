@@ -40,7 +40,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release download --repo rhysd/actionlint v1.7.12 --pattern '*_linux_amd64.tar.gz' --dir /tmp/actionlint
-          tar -xzf /tmp/actionlint/actionlint_*_linux_amd64.tar.gz -C /tmp/actionlint ./actionlint
+          tar -xzf /tmp/actionlint/actionlint_*_linux_amd64.tar.gz -C /tmp/actionlint
           echo "/tmp/actionlint" >> "$GITHUB_PATH"
       - name: Lint des workflows GitHub Actions
         run: actionlint -color
