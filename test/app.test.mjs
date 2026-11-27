@@ -32,12 +32,13 @@ var location = { protocol: "file:" };
 var indexedDB = { open: function () { var r = {}; setTimeout(function () { if (r.onerror) r.onerror({}); }, 0); return r; } };
 `;
 
-function loadApp() {
+function loadApp(seed) {
   let src = readFileSync(new URL("../src/app.js", import.meta.url), "utf8");
   src = src.replace("__WORDS_EN__", "[]").replace("__WORDS_DE__", "[]");
   const ctx = {};
   vm.createContext(ctx);
-  try { vm.runInContext(stub + src, ctx); } catch (e) { /* les effets de bord au chargement peuvent échouer sur les stubs */ }
+  const pre = seed ? "__store = " + JSON.stringify(seed) + ";\n" : "";
+  try { vm.runInContext(stub + pre + src, ctx); } catch (e) { /* les effets de bord au chargement peuvent échouer sur les stubs */ }
   return ctx;
 }
 
@@ -156,6 +157,21 @@ test("moteur unifié fr : recherche et filtre favoris", () => {
   app.fState.favOnly = true;
   app.frFavs = { pomme: true };
   assert.equal(JSON.stringify(app.frDeck().map((w) => w.t)), '["pomme"]');
+});
+
+test("thèmes : cycle clair/sombre/automne et migration de l'ancien réglage", () => {
+  let app = loadApp();
+  assert.equal(JSON.stringify(app.THEMES), '["light","dark","autumn"]');
+  assert.equal(app.theme, "light");
+  assert.equal(app.LS.theme, "flashcards-theme");
+  app = loadApp({ "flashcards-dark": "1" });
+  assert.equal(app.theme, "dark");
+  app = loadApp({ "flashcards-theme": "autumn" });
+  assert.equal(app.theme, "autumn");
+  app.applyTheme("autumn");
+  assert.equal(app.theme, "autumn");
+  app.applyTheme("light");
+  assert.equal(app.theme, "light");
 });
 
 test("moteur unifié : render() ne plante pas avec les stubs DOM", () => {

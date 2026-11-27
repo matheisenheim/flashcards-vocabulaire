@@ -4,6 +4,18 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v22.2.0 — Thème automne chaud + sobriété
+- 3ᵉ thème « automne » (chaud/sobre, tons pierre/ambré) : simple bloc de variables CSS `body.autumn`
+- Le bouton de thème cycle clair ☀️ → sombre 🌙 → automne 🍂, préférence persistée (`flashcards-theme`), migration de l'ancien réglage `flashcards-dark`
+- Thème automne sobre : badges de catégorie neutralisés, ombres atténuées
+- `meta theme-color` mise à jour selon le thème ; 1 nouveau test (cycle + migration) : 13/13 OK
+
+## v22.1.1 — Moteur de cartes unifié
+- `makeEngine(cfg)` dans `src/app.js` : un seul moteur (deck filtré, navigation, retournement, « Je connais » à 2 appuis, favoris, rendu) partagé par les vues anglais/allemand (`langEngine`) et français (`frEngine`)
+- Les spécificités de chaque vue passent en configuration : accesseurs (`keyOf`/`catOf`/`levelOf`/`textOf`), `ids` DOM, `renderCard`, `renderEmpty`, `knowText`, stockage `known`/`favs`
+- Suppression des ~150 lignes dupliquées (`f*` vs `l*`) ; alias `deck()`/`lRender()`/… conservés pour l'examen et le dashboard
+- 3 nouveaux tests unitaires sur le moteur (filtres, recherche, favoris, rendu) : 12/12 OK
+
 ## v22.1.0 — CI, tests, accessibilité, releases (palier 3)
 - Tests unitaires `node --test` (`test/app.test.mjs`, zéro dépendance) : `shuffledArr`, `navGo`, `daysBetween`, `normalizeLangList`, `esc`, `cleanTitle`, `lsGetJSON`/`lsSetJSON`, stabilité des clés `LS`, format de `VERSION`
 - CI `.github/workflows/ci.yml` : syntaxe (`node --check`), tests, build à jour (`git diff --exit-code`), lint des workflows avec actionlint

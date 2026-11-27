@@ -1,6 +1,7 @@
-var VERSION = "v22.1.1";
+var VERSION = "v22.2.0";
 var LS = {
   dark: "flashcards-dark",
+  theme: "flashcards-theme",
   stats: "flashcards-stats-v1",
   known: { fr: "flashcards-fr-known-v1", en: "flashcards-en-known-v1", de: "flashcards-de-known-v1" },
   favs: { fr: "flashcards-fr-favs-v1" }
@@ -801,19 +802,23 @@ document.addEventListener("touchend", function (e) {
 }, { passive: true });
 
 /* ================= MODE SOMBRE ================= */
-var darkOn = false;
-darkOn = lsGet(LS.dark) === "1";
-function applyDark(on) {
-  document.body.classList.toggle("dark", on);
-  byId("darkBtn").textContent = on ? "☀️" : "🌙";
+var THEMES = ["light", "dark", "autumn"];
+var THEME_ICON = { light: "☀️", dark: "🌙", autumn: "🍂" };
+var THEME_BG = { light: "#0f172a", dark: "#0b1220", autumn: "#292524" };
+var theme = lsGet(LS.theme) || (lsGet(LS.dark) === "1" ? "dark" : "light");
+if (THEMES.indexOf(theme) < 0) theme = "light";
+function applyTheme(t) {
+  theme = t;
+  document.body.classList.toggle("dark", t === "dark");
+  document.body.classList.toggle("autumn", t === "autumn");
+  byId("themeBtn").textContent = THEME_ICON[t];
   var m = document.querySelector('meta[name="theme-color"]');
-  if (m) m.setAttribute("content", on ? "#0b1220" : "#0f172a");
+  if (m) m.setAttribute("content", THEME_BG[t]);
 }
-applyDark(darkOn);
-byId("darkBtn").addEventListener("click", function () {
-  darkOn = !darkOn;
-  lsSet(LS.dark, darkOn ? "1" : "0");
-  applyDark(darkOn);
+applyTheme(theme);
+byId("themeBtn").addEventListener("click", function () {
+  applyTheme(THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length]);
+  lsSet(LS.theme, theme);
   if (mode === "dash") renderDash();
 });
 

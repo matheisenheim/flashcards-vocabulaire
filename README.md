@@ -14,7 +14,7 @@ L'application est publiée via GitHub Pages : **[matheisenheim.github.io/flashca
 - **Niveaux CEFR** : anglais et allemand classés A1 → C2
 - **Favoris** : étoile jaune ★ = favori, gris ☆ = non favori, filtre « Favoris » pour ne réviser que ses favoris
 - **Suivi de progression** : bouton « Je connais », pourcentage de mots sus, statistiques et examens (seuil de réussite 70 %)
-- **Mode sombre** 🌙 persistant
+- **Trois thèmes** persistants : clair ☀️, sombre 🌙, automne chaud 🍂 (bouton en haut à droite)
 - **Import / export JSON** des listes de mots (depuis le Dashboard → 📂 Gestion des listes)
 - **PWA** : installable sur l'écran d'accueil du téléphone, ouverture plein écran, **fonctionne hors ligne** grâce au service worker (`sw.js`)
 
