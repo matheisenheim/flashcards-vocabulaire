@@ -127,3 +127,44 @@ test("VERSION au format x.x.x", () => {
   const app = loadApp();
   assert.match(app.VERSION, /^v\d+\.\d+\.\d+$/);
 });
+
+test("moteur unifié lang : filtres catégorie/niveau et mélange", () => {
+  const app = loadApp();
+  app.WORDS = [["a", "x", "verbes", "", "A1"], ["b", "y", "noms", "", "B2"], ["c", "z", "verbes", "", "B1"]];
+  app.lState.cat = "all"; app.lState.level = "all"; app.lState.shuffled = false; app.lState.query = "";
+  assert.equal(app.deck().length, 3);
+  app.lState.cat = "verbes";
+  assert.equal(app.deck().length, 2);
+  app.lState.cat = "all"; app.lState.level = "B2";
+  assert.equal(JSON.stringify(app.deck().map((w) => w[0])), '["b"]');
+  app.lState.level = "all"; app.lState.shuffled = true; app.lState.seed = 7;
+  const d = app.deck();
+  assert.equal(d.length, 3);
+  assert.equal(JSON.stringify([...d].map((w) => w[0]).sort()), '["a","b","c"]');
+});
+
+test("moteur unifié fr : recherche et filtre favoris", () => {
+  const app = loadApp();
+  app.frWords = [
+    { t: "pomme", c: "nom", d: [["fruit", [], [], []]] },
+    { t: "poire", c: "nom", d: [["fruit", [], [], []]] },
+    { t: "table", c: "nom", d: [["meuble", [], [], []]] }
+  ];
+  app.fState.query = "po";
+  assert.equal(app.frDeck().length, 2);
+  app.fState.query = "";
+  app.fState.favOnly = true;
+  app.frFavs = { pomme: true };
+  assert.equal(JSON.stringify(app.frDeck().map((w) => w.t)), '["pomme"]');
+});
+
+test("moteur unifié : render() ne plante pas avec les stubs DOM", () => {
+  const app = loadApp();
+  app.WORDS = [["a", "x", "verbes", "", "A1"]];
+  app.lState.cat = "all"; app.lState.level = "all"; app.lState.shuffled = false; app.lState.flipped = false;
+  app.langEngine.render();
+  app.frWords = [{ t: "pomme", c: "nom", d: [["fruit", [], [], []]] }];
+  app.frEngine.render();
+  app.langEngine.next();
+  app.frEngine.next();
+});

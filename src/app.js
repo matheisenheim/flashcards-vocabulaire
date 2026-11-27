@@ -1,4 +1,4 @@
-var VERSION = "v22.1.0";
+var VERSION = "v22.1.1";
 var LS = {
   dark: "flashcards-dark",
   stats: "flashcards-stats-v1",
@@ -241,38 +241,122 @@ function shuffledArr(arr, seed) {
   for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(rand() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
   return a;
 }
-function deck() {
-  var d = lState.cat === "all" ? WORDS : WORDS.filter(function (w) { return w[2] === lState.cat; });
-  if (mode !== "fr" && lState.level && lState.level !== "all") d = d.filter(function (w) { return w[4] === lState.level; });
-  return lState.shuffled ? shuffledArr(d, lState.seed) : d;
+function makeEngine(o) {
+  var confirmKey = null;
+  function deck() {
+    var st = o.state;
+    var d = o.getWords() || [];
+    if (st.favOnly && o.favs) d = d.filter(function (w) { return o.favs.get()[o.keyOf(w)]; });
+    if (st.cat && st.cat !== "all") d = d.filter(function (w) { return o.catOf(w) === st.cat; });
+    if (st.level && st.level !== "all") d = d.filter(function (w) { return o.levelOf(w) === st.level; });
+    var q = (st.query || "").trim().toLowerCase();
+    if (q) {
+      var starts = d.filter(function (w) { return String(o.textOf(w)).toLowerCase().indexOf(q) === 0; });
+      var contains = d.filter(function (w) { return String(o.textOf(w)).toLowerCase().indexOf(q) > 0; });
+      return starts.concat(contains).slice(0, 100);
+    }
+    return st.shuffled ? shuffledArr(d, st.seed) : d;
+  }
+  function render() {
+    if (o.known.reload) o.known.reload();
+    var st = o.state, ids = o.ids, d = deck();
+    if (!d.length) { o.renderEmpty(); return; }
+    if (st.index >= d.length) st.index = 0;
+    var w = d[st.index];
+    o.renderCard(ids, w, st);
+    byId(ids.card).className = "card" + (st.flipped ? " flipped" : "");
+    byId(ids.pos).textContent = (st.index + 1) + " / " + d.length;
+    var kn = o.known.get();
+    var kc = d.filter(function (x) { return kn[o.keyOf(x)]; }).length;
+    byId(ids.knowTxt).textContent = o.knowText(kc, d.length);
+    byId(ids.prog).style.width = Math.round(kc / d.length * 100) + "%";
+    var kb = byId(ids.knowBtn);
+    kb.className = "act know" + (kn[o.keyOf(w)] ? " on" : "");
+    kb.textContent = kn[o.keyOf(w)] ? "✓ Je connais (déjà su)" : "Je connais ce mot";
+    if (o.favs && ids.favCard) {
+      var fv = o.favs.get()[o.keyOf(w)];
+      var fb = byId(ids.favCard);
+      fb.className = "act" + (fv ? " favon" : "");
+      fb.innerHTML = '<span class="star' + (fv ? "" : " off") + '">' + (fv ? "&#9733;" : "&#9734;") + "</span> Favori" + (fv ? " (favori)" : "");
+    }
+  }
+  function flip() {
+    if (swipeGuard()) return;
+    if (!o.state.flipped) { var w = deck()[o.state.index]; if (w) addWordRead(o.readPrefix() + o.keyOf(w)); }
+    o.state.flipped = !o.state.flipped; render();
+  }
+  function next() { if (navGo(o.state, deck().length, 1)) render(); }
+  function prev() { if (navGo(o.state, deck().length, -1)) render(); }
+  function restart() { o.state.index = 0; o.state.flipped = false; render(); }
+  function toggleKnow(e) {
+    e.stopPropagation();
+    if (swipeGuard()) return;
+    if (isDoubleTap()) return;
+    try {
+      var w = deck()[o.state.index];
+      if (!w) return;
+      var k = o.keyOf(w), kn = o.known.get();
+      if (kn[k]) {
+        if (confirmKey !== k) { confirmKey = k; return; }
+        confirmKey = null; kn[k] = false;
+      } else { confirmKey = null; kn[k] = true; }
+      o.known.set(kn); render();
+    } catch (err) { toast("Erreur : " + err.message); }
+  }
+  function toggleFav(e) {
+    e.stopPropagation();
+    if (swipeGuard()) return;
+    try {
+      var w = deck()[o.state.index];
+      if (!w) return;
+      var k = o.keyOf(w), fv = o.favs.get();
+      fv[k] = !fv[k];
+      if (!fv[k]) delete fv[k];
+      o.favs.set(fv); render();
+    } catch (err) { toast("Erreur : " + err.message); }
+  }
+  function wire() {
+    var ids = o.ids;
+    byId(ids.card).onclick = flip;
+    byId(ids.card).addEventListener("keydown", cardKey);
+    byId(ids.next).onclick = next;
+    byId(ids.prev).onclick = prev;
+    byId(ids.review).onclick = next;
+    byId(ids.knowBtn).addEventListener("click", toggleKnow);
+    if (o.favs && ids.favCard) byId(ids.favCard).addEventListener("click", toggleFav);
+  }
+  return { deck: deck, render: render, flip: flip, next: next, prev: prev, restart: restart, wire: wire };
 }
-function lRender() {
-  loadKnown();
-  var d = deck();
-  if (!d.length) return;
-  if (lState.index >= d.length) lState.index = 0;
-  var w = d[lState.index];
-  var foreign = w[0], fr = w[1], cat = w[2], note = w[3] || "";
-  var showForeign = lState.lang !== "fr";
-  byId("frontTxt").textContent = showForeign ? foreign : fr;
-  byId("frontNote").textContent = showForeign ? note : "";
-  byId("backTxt").textContent = showForeign ? fr : foreign;
-  byId("backNote").textContent = showForeign ? "" : note;
-  var badge = byId("badge");
-  badge.textContent = CATS[cat] + (w[4] ? " · " + w[4] : "");
-  badge.className = "badge cat-" + cat;
-  byId("card").className = "card" + (lState.flipped ? " flipped" : "");
-  byId("pos").textContent = (lState.index + 1) + " / " + d.length;
-  var kc = d.filter(function (x) { return known[x[0]]; }).length;
-  byId("knowTxt").textContent = kc + " mots sus (" + Math.round(kc / d.length * 100) + " %)";
-  byId("prog").style.width = Math.round(kc / d.length * 100) + "%";
-  var kb = byId("knowBtn");
-  kb.className = "act know" + (known[foreign] ? " on" : "");
-  kb.textContent = known[foreign] ? "✓ Je connais (déjà su)" : "Je connais ce mot";
-}
-function lNext() { if (navGo(lState, deck().length, 1)) lRender(); }
-function lPrev() { if (navGo(lState, deck().length, -1)) lRender(); }
-function lRestart() { lState.index = 0; lState.flipped = false; lRender(); }
+
+var langEngine = makeEngine({
+  state: lState,
+  getWords: function () { return WORDS; },
+  keyOf: function (w) { return w[0]; },
+  catOf: function (w) { return w[2]; },
+  levelOf: function (w) { return w[4]; },
+  textOf: function (w) { return w[0]; },
+  readPrefix: function () { return mode + ":"; },
+  ids: { card: "card", pos: "pos", knowTxt: "knowTxt", prog: "prog", knowBtn: "knowBtn", next: "nextBtn", prev: "prevBtn", review: "reviewBtn" },
+  known: { get: function () { return known; }, set: function (v) { known = v; saveKnown(); }, reload: loadKnown },
+  renderEmpty: function () {},
+  knowText: function (kc, len) { return kc + " mots sus (" + Math.round(kc / len * 100) + " %)"; },
+  renderCard: function (ids, w, st) {
+    var foreign = w[0], fr = w[1], cat = w[2], note = w[3] || "";
+    var showForeign = st.lang !== "fr";
+    byId("frontTxt").textContent = showForeign ? foreign : fr;
+    byId("frontNote").textContent = showForeign ? note : "";
+    byId("backTxt").textContent = showForeign ? fr : foreign;
+    byId("backNote").textContent = showForeign ? "" : note;
+    var badge = byId("badge");
+    badge.textContent = CATS[cat] + (w[4] ? " · " + w[4] : "");
+    badge.className = "badge cat-" + cat;
+  }
+});
+function deck() { return langEngine.deck(); }
+function lRender() { langEngine.render(); }
+function lNext() { langEngine.next(); }
+function lPrev() { langEngine.prev(); }
+function lRestart() { langEngine.restart(); }
 function buildCatSelect() {
   var sel = byId("catSelect");
   sel.innerHTML = "";
@@ -285,33 +369,7 @@ function buildCatSelect() {
   });
   sel.value = lState.cat;
 }
-byId("card").onclick = function () {
-  if (swipeGuard()) return;
-  if (!lState.flipped) { var w = deck()[lState.index]; if (w) addWordRead(mode + ":" + w[0]); }
-  lState.flipped = !lState.flipped; lRender();
-};
-byId("card").addEventListener("keydown", cardKey);
-byId("nextBtn").onclick = lNext;
-byId("prevBtn").onclick = lPrev;
-byId("reviewBtn").onclick = lNext;
-byId("knowBtn").addEventListener("click", function (e) {
-  e.stopPropagation();
-  if (swipeGuard()) return;
-  if (isDoubleTap()) return;
-  try {
-    var w = deck()[lState.index];
-    if (known[w[0]]) {
-      if (knowBtnConfirm !== w[0]) { knowBtnConfirm = w[0]; return; }
-      knowBtnConfirm = null;
-      known[w[0]] = false;
-    } else {
-      knowBtnConfirm = null;
-      known[w[0]] = true;
-    }
-    saveKnown(); lRender();
-  } catch (err) { toast("Erreur : " + err.message); }
-});
-var knowBtnConfirm = null;
+langEngine.wire();
 byId("langA").onclick = function () { lState.lang = mode; lState.flipped = false; langUI(); lRender(); };
 byId("langB").onclick = function () { lState.lang = "fr"; lState.flipped = false; langUI(); lRender(); };
 function langUI() {
@@ -423,18 +481,7 @@ function esc(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 function cleanTitle(t) { return String(t || "").replace(/\(Réf\. ortho\.[^)]*\)/g, "").trim(); }
-function frDeck() {
-  var d = frWords || [];
-  if (fState.favOnly) d = d.filter(function (w) { return frFavs[w.t]; });
-  if (fState.cat) d = d.filter(function (w) { return w.c === fState.cat; });
-  var q = fState.query.trim().toLowerCase();
-  if (q) {
-    var starts = d.filter(function (w) { return w.t.toLowerCase().indexOf(q) === 0; });
-    var contains = d.filter(function (w) { return w.t.toLowerCase().indexOf(q) > 0; });
-    return starts.concat(contains).slice(0, 100);
-  }
-  return fState.shuffled ? shuffledArr(d, fState.seed) : d;
-}
+
 function frSaveKnown() { lsSetJSON(FR_KEY, frKnown); }
 var FR_FAV = LS.favs.fr;
 var frFavs = {};
@@ -442,38 +489,39 @@ frFavs = lsGetJSON(FR_FAV, {});
 function frSaveFavs() { lsSetJSON(FR_FAV, frFavs); }
 var frKnown = {};
 frKnown = lsGetJSON(FR_KEY, {});
-function fRender() {
-  var d = frDeck();
-  if (!d.length) { byId("frFront").textContent = "Aucun mot"; byId("frBack").innerHTML = ""; return; }
-  if (fState.index >= d.length) fState.index = 0;
-  var w = d[fState.index];
-  byId("frBadge").textContent = w.c || "";
-  byId("frFront").textContent = w.t;
-  var html = "";
-  w.d.forEach(function (def, i) {
-    html += '<div class="d">';
-    html += (w.d.length > 1 ? '<b class="num">' + (i + 1) + '.</b> ' : "") + esc(def[0]);
-    (def[1] || []).forEach(function (ex) { if (ex && ex !== ";") html += '<div class="ex">« ' + esc(ex) + ' »</div>'; });
-    if (def[2] && def[2].length) html += '<div class="syn"> synonymes : ' + esc(def[2].join(", ")) + "</div>";
-    if (def[3] && def[3].length) html += '<div class="contr"> contraires : ' + esc(def[3].join(", ")) + "</div>";
-    html += "</div>";
-  });
-  byId("frBack").innerHTML = html;
-  byId("frCard").className = "card" + (fState.flipped ? " flipped" : "");
-  byId("frPos").textContent = (fState.index + 1) + " / " + d.length;
-  var kc = d.filter(function (x) { return frKnown[x.t]; }).length;
-  byId("frKnowTxt").textContent = kc + " mots sus (" + Math.round(kc / d.length * 100) + " %) — " + (frWords ? frWords.length : 0) + " mots au total";
-  byId("frProg").style.width = Math.round(kc / d.length * 100) + "%";
-  var kb = byId("frKnowBtn");
-  kb.className = "act know" + (frKnown[w.t] ? " on" : "");
-  kb.textContent = frKnown[w.t] ? "✓ Je connais (déjà su)" : "Je connais ce mot";
-  var fb = byId("frFavCard");
-  fb.className = "act" + (frFavs[w.t] ? " favon" : "");
-  fb.innerHTML = '<span class="star' + (frFavs[w.t] ? "" : " off") + '">' + (frFavs[w.t] ? "&#9733;" : "&#9734;") + "</span> Favori" + (frFavs[w.t] ? " (favori)" : "");
-}
-function fNext() { if (navGo(fState, frDeck().length, 1)) fRender(); }
-function fPrev() { if (navGo(fState, frDeck().length, -1)) fRender(); }
-function fRestart() { fState.index = 0; fState.flipped = false; fRender(); }
+var frEngine = makeEngine({
+  state: fState,
+  getWords: function () { return frWords || []; },
+  keyOf: function (w) { return w.t; },
+  catOf: function (w) { return w.c; },
+  levelOf: function () { return null; },
+  textOf: function (w) { return w.t; },
+  readPrefix: function () { return "fr:"; },
+  ids: { card: "frCard", pos: "frPos", knowTxt: "frKnowTxt", prog: "frProg", knowBtn: "frKnowBtn", next: "frNext", prev: "frPrev", review: "frReviewBtn", favCard: "frFavCard" },
+  known: { get: function () { return frKnown; }, set: function (v) { frKnown = v; frSaveKnown(); }, reload: function () { frKnown = lsGetJSON(FR_KEY, {}); } },
+  favs: { get: function () { return frFavs; }, set: function (v) { frFavs = v; frSaveFavs(); } },
+  renderEmpty: function () { byId("frFront").textContent = "Aucun mot"; byId("frBack").innerHTML = ""; },
+  knowText: function (kc, len) { return kc + " mots sus (" + Math.round(kc / len * 100) + " %) — " + (frWords ? frWords.length : 0) + " mots au total"; },
+  renderCard: function (ids, w, st) {
+    byId("frBadge").textContent = w.c || "";
+    byId("frFront").textContent = w.t;
+    var html = "";
+    w.d.forEach(function (def, i) {
+      html += '<div class="d">';
+      html += (w.d.length > 1 ? '<b class="num">' + (i + 1) + '.</b> ' : "") + esc(def[0]);
+      (def[1] || []).forEach(function (ex) { if (ex && ex !== ";") html += '<div class="ex">« ' + esc(ex) + ' »</div>'; });
+      if (def[2] && def[2].length) html += '<div class="syn"> synonymes : ' + esc(def[2].join(", ")) + "</div>";
+      if (def[3] && def[3].length) html += '<div class="contr"> contraires : ' + esc(def[3].join(", ")) + "</div>";
+      html += "</div>";
+    });
+    byId("frBack").innerHTML = html;
+  }
+});
+function frDeck() { return frEngine.deck(); }
+function fRender() { frEngine.render(); }
+function fNext() { frEngine.next(); }
+function fPrev() { frEngine.prev(); }
+function fRestart() { frEngine.restart(); }
 function showFrStudy(hasData) {
   byId("importBox").classList.toggle("hidden", hasData);
   byId("frStudy").classList.toggle("hidden", !hasData);
@@ -537,45 +585,7 @@ byId("fileInput").onchange = function (e) {
   reader.onerror = function () { status.textContent = "❌ Impossible de lire le fichier."; };
   reader.readAsText(file);
 };
-byId("frCard").onclick = function () {
-  if (swipeGuard()) return;
-  if (!fState.flipped) { var w = frDeck()[fState.index]; if (w) addWordRead("fr:" + w.t); }
-  fState.flipped = !fState.flipped; fRender();
-};
-byId("frCard").addEventListener("keydown", cardKey);
-byId("frNext").onclick = fNext;
-byId("frPrev").onclick = fPrev;
-byId("frReviewBtn").onclick = fNext;
-byId("frKnowBtn").addEventListener("click", function (e) {
-  e.stopPropagation();
-  if (swipeGuard()) return;
-  if (isDoubleTap()) return;
-  try {
-    var w = frDeck()[fState.index];
-    if (!w) return;
-    if (frKnown[w.t]) {
-      if (frKnowBtnConfirm !== w.t) { frKnowBtnConfirm = w.t; return; }
-      frKnowBtnConfirm = null;
-      frKnown[w.t] = false;
-    } else {
-      frKnowBtnConfirm = null;
-      frKnown[w.t] = true;
-    }
-    frSaveKnown(); fRender();
-  } catch (err) { toast("Erreur : " + err.message); }
-});
-var frKnowBtnConfirm = null;
-byId("frFavCard").addEventListener("click", function (e) {
-  e.stopPropagation();
-  if (swipeGuard()) return;
-  try {
-    var w = frDeck()[fState.index];
-    if (!w) return;
-    frFavs[w.t] = !frFavs[w.t];
-    if (!frFavs[w.t]) delete frFavs[w.t];
-    frSaveFavs(); fRender();
-  } catch (err) { toast("Erreur : " + err.message); }
-});
+frEngine.wire();
 byId("frFavBtn").addEventListener("click", function () {
   fState.favOnly = !fState.favOnly;
   this.classList.toggle("active", fState.favOnly);
