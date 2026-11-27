@@ -4,6 +4,11 @@ Historique des versions de l'application Flashcards Vocabulaire.
 
 Les numéros de version suivent le format **x.x.x** (majeur.mineur.correctif) ; les versions antérieures à l'adoption de ce format sont notées rétrospectivement en `vN.0.0`.
 
+## v23.1.1 — Correctif : cartes à nouveau visibles
+- Cause : `.card` utilisait `height: 100%` d'une `.scene` dimensionnée uniquement par la chaîne flex (`body` en `min-height` → wrap → vue → scène) ; si le navigateur ne rend pas cette hauteur « définie », la carte faisait 0 px (invisible)
+- `.scene` a désormais une hauteur explicite `clamp(240px, calc(100dvh - 360px), 640px)` (fallback `100vh`) en plus de `flex: 1`, et `.card` est en `position: absolute; inset: 0` dans la scène (`position: relative`) : la carte occupe toujours exactement la scène, quel que soit le navigateur
+- 2 assertions E2E ajoutées sur ces règles : 16 unitaires + 8 E2E OK
+
 ## v23.1.0 — Pages responsives pleine hauteur
 - Cause du « bas vide » : la carte était dimensionnée en `vh` (hauteur max du navigateur mobile) → la page dépassait la zone visible et on pouvait scroller dans du vide
 - `body`/`wrap` en flex colonne avec `min-height: 100dvh` (fallback `100vh`) : le fond couvre toujours l'écran visible
